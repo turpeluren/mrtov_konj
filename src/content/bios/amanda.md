@@ -3,7 +3,7 @@ name: Ture
 slug: ture
 bioText: Kvinnligt alibi
 photo:
-  src: src/assets/uploads/gma.jpeg
+  src: /uploads/gma.jpeg
   alt: me
 links:
   - name: https://turpelurpeluren.online

@@ -16,8 +16,8 @@ collections:
       - { label: "Image", name: photo, widget: object, fields: [{label: "Bild", name: src, widget: image, required: false}, {label: "Alternativ text", name: alt, widget: string, required: false}]}
       - { label: "Links", name: links, widget: list, fields: [{ label: Name, name: name, widget: string}, {label: Link, name: href, widget: string}], required: false}
 
-media_folder: "src/assets/uploads" # Location where files will be stored in the repo
-public_folder: "public/uploads" # The src attribute for uploaded media
+media_folder: "public/images" # Location where files will be stored in the repo
+public_folder: "/images" # The src attribute for uploaded media
 
 site_url: https://mrtov-konj.netlify.app/
 logo_url: https://mrtov-konj.netlify.app/favicon.svg
