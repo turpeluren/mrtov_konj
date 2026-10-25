@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import type { GetStaticPaths } from "astro";
+import { type CollectionEntry, getCollection} from "astro:content";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const allBios = await getCollection("bios");
+
+	return allBios.map((bio) => ({
+		params: {
+			slug: bio.data.slug,
+		},
+		props: { bio },
+	}));
+};
+
+interface Props {
+	bio: CollectionEntry<"bios">;
+}
+
+const { bio } = Astro.props as Props;
+const { name, slug, bioText }  = bio.data;
+
+---
+
+<Layout>
+	<h1>{name}</h1>
+	<p>{bioText}</p>
+</Layout>

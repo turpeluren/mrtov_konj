@@ -1,0 +1,32 @@
+---
+import PageLayout from "../../layouts/Layout.astro";
+
+import { type CollectionEntry, getCollection} from "astro:content";
+
+const allBands: CollectionEntry<"bios">[] = await getCollection("bios");
+
+const meta = {
+	description: "Bands of Мртов Коњ",
+	title: "Bands",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">Bands</h1>
+	<ul class="space-y-4">
+		{
+			allBands.map(({data}) => (
+				<li class="flex items-center gap-x-2">
+					💀<a
+						class="cactus-link inline-block"
+						data-astro-prefetch
+						href={`/bands/${data.slug}/`}
+						title={`Show bio of ${data.name}`}
+					>
+						{data.name}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</PageLayout>

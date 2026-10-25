@@ -5,49 +5,16 @@ backend:
 publish_mode: editorial_workflow
 
 collections:
-  - name: "posts" # Used in routes, e.g., /admin/collections/blog
-    label: "Posts" # Used in the UI
-    folder: "src/content/post" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document, usually in frontmatter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Authors", name: "author", widget: "list", field: { label: Author, name: author, widget: string }, hint: "Skriv alltid eXAKT samma namn. En författare per inmatningsfält" }
-      - { label: "Publish Date", name: "publishDate", widget: "datetime", hint: "dd Månad yyyy", format: "D MMM YYYY"}
-      - { label: "Description", name: "description", widget: "string"}
-      - { label: "Tags", name: "tags", widget: "list", field: { label: Tag, name: tag, widget: string }, hint: "Använd ej hashtag! En tag per inmatningsfält", required: false }
-      - { label: "Og-Image", name: "ogImage", widget: "string", required: false, collapsed: true, hint: "Om ni vill ha custom. Bilden som visas när man delar i sociala medier. Måste vara en url till en bild hostad online. Ladda upp på ex. imgur." }
-      - {
-          label: "Cover Image",
-          name: "coverImage",
-          widget: "object",
-          #max: 1,
-          required: false,
-          collapsed: true,
-          #minimize_collapsed: true,
-          hint: "Frivillig storbild i toppen",
-          fields: [
-            { label: "Bild", name: "src", widget: "image", required: false },
-            { label: "Alternativ text", name: "alt", widget: "string", required: false }
-            ],
-        }
-      - { label: "Stor Cover Image", name: largeCoverImage, widget: boolean, default: false, required: false, hint: "Slå på för större cover bild" }
-      - { label: Draft (slå på för att avpublicera från sidan), name: draft, widget: 'boolean', default: false, required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "pages"
-    label: "Pages"
-    folder: "src/pages"
-    create: false
-    fields:
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "bios"
-    label: "Bios"
+  - name: "bands"
+    label: "Band bios"
     folder: "src/content/bios"
     create: true
     fields:
-      - { label: "Namn", name: "name", widget: "string", hint: 'Skriv EXAKT samma som ditt author namn' }
-      - { label: "Bio", name: bio, widget: text, required: false }
-      - { label: "Bild", name: photo, widget: object, fields: [{label: "Bild", name: src, widget: image, required: false}, {label: "Alternativ text", name: alt, widget: string, required: false}]}
-      - { label: "Länkar", name: links, widget: list, fields: [{ label: Namn, name: name, widget: string}, {label: Länk, name: href, widget: string}], required: false}
+      - { label: "Name", name: "name", widget: "string", hint: '' }
+      - { label: "Slug", name: "slug", widget: "string", hint: 'The URL for the bio page is /bios/{slug}' }
+      - { label: "Bio", name: bioText, widget: text, required: false }
+      - { label: "Image", name: photo, widget: object, fields: [{label: "Bild", name: src, widget: image, required: false}, {label: "Alternativ text", name: alt, widget: string, required: false}]}
+      - { label: "Links", name: links, widget: list, fields: [{ label: Name, name: name, widget: string}, {label: Link, name: href, widget: string}], required: false}
 
 media_folder: "src/assets/uploads" # Location where files will be stored in the repo
 public_folder: "src/assets/uploads" # The src attribute for uploaded media
