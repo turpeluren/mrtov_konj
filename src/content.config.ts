@@ -6,7 +6,6 @@ const bios = defineCollection({
 	schema: () =>
 		z.object({
 			name: z.string(),
-            slug: z.string(),
 			photo: z
 				.object({
 					alt: z.string().optional(),

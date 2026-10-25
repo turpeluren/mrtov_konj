@@ -9,7 +9,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 	return allBios.map((bio) => ({
 		params: {
-			slug: bio.data.slug,
+			slug: bio.id,
 		},
 		props: { bio },
 	}));
@@ -20,15 +20,15 @@ interface Props {
 }
 
 const { bio } = Astro.props as Props;
-const { name, slug, bioText, links, photo }  = bio.data;
+const { name, bioText, links, photo }  = bio.data;
 
 ---
 
 <Layout>
 	<h1>{name}</h1>
 	{photo && (
-		<div class="w-32 h-32 mb-4">
-			<img src={photo.src} alt={photo.alt} class="mb-4 w-full aspect-square object-cover" />
+		<div class="w-full aspect-video mb-4">
+			<img src={photo.src} alt={photo.alt} class="mb-4 w-full object-cover" />
 		</div>
 	)}
 	<p>{bioText}</p>

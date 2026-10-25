@@ -15,12 +15,12 @@ const meta = {
 	<h1 class="title mb-6">Bands</h1>
 	<ul class="space-y-4">
 		{
-			allBands.map(({data}) => (
+			allBands.map(({ data, id }) => (
 				<li class="flex items-center gap-x-2">
 					💀<a
 						class="cactus-link inline-block"
 						data-astro-prefetch
-						href={`/bands/${data.slug}/`}
+						href={`/bands/${id}/`}
 						title={`Show bio of ${data.name}`}
 					>
 						{data.name}
