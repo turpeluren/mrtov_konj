@@ -3,14 +3,14 @@ import { defineCollection, z } from "astro:content";
 
 const bios = defineCollection({
 	loader: glob({ pattern: "**/*.md", base: "./src/content/bios" }),
-	schema: ({ image }) =>
+	schema: () =>
 		z.object({
 			name: z.string(),
             slug: z.string(),
 			photo: z
 				.object({
 					alt: z.string().optional(),
-					src: image(),
+					src: z.string(),
 				})
 				.optional(),
 			bioText: z.string().optional(),
