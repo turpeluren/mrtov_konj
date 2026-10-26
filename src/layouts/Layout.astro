@@ -1,5 +1,9 @@
 ---
 import "../styles/global.css";
+import Header from '../components/Header.astro';
+
+const { bgImage } = Astro.props;
+console.log(bgImage);
 ---
 
 <!doctype html>
@@ -12,12 +16,22 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Mrtov Konj</title>
 
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
 		<!-- Netlify identity widget -->
 		<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
-	<body>
-		<div class="h-8 bg-blue-500"></div>
-		<div class="max-w-2xl mx-auto px-4 py-8">
+	<body class="bg-black relative">
+		<div class="absolute z-[-1] inset-0 w-full h-full bg-cover bg-center min-h-screen backdrop-blur-sm brightness-50" style={ bgImage ? `background-image: url(${bgImage.src})` : ''} />
+		<Header />
+		<div class="max-w-6xl mx-auto px-4 py-8">
 			<slot />
 		</div>
 	</body>

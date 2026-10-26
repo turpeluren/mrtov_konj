@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import horse from '../assets/mrtov_konj-logo.png';
+---
+
+<div class="h-24 px-8 relative flex items-center justify-between">
+    <div class="absolute z-[-1] inset-0 w-full h-full bg-black opacity-50"></div>
+    <a href="/"><p class="text-2xl w-24 text-white dela-gothic-one-regular text-outline leading-6">МРТОВ<br>КОЊ</p></a>
+    <nav class="">
+        <ul class="self-center justify-self-center flex space-x-24 items-center">
+            <li><a href="/" class="text-yellow-400 flex flex-col items-center leading-tight hover:text-gray-300"><p></p><p>ARTISTS</p></a></li>
+            <li><a href="/news/" class="text-white flex flex-col items-center leading-tight hover:text-gray-300"><p>НОВОСТИ</p><p>NEWS</p></a></li>
+            <li><a href="/shop/" class="text-white flex flex-col items-center leading-tight hover:text-gray-300"><p>КУПИ</p><p>SHOP</p></a></li>
+            <li><a href="/archive/" class="text-white flex flex-col items-center leading-tight hover:text-gray-300"><p>АРХИВА</p><p>ARCHIVE</p></a></li>
+            <li><a href="/support/" class="text-black bg-cyan-200 rounded-full px-4 py-1 flex flex-col items-center leading-tight hover:brightness-90"><p>ПОДДРЖИ нè</p><p>SUPPORT</p></a></li>
+        </ul>
+    </nav>
+    <Image src={horse} alt="Мртов Коњ" class="h-14 w-24 object-contain" />
+</div>

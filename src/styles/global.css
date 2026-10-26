@@ -1,23 +1,57 @@
 @import "tailwindcss";
-
 @layer base {
-	h1 {
-		@apply text-4xl font-bold leading-tight;
-	}
+    h1 {
+        @apply text-4xl font-bold leading-tight text-white ;
+        font-family: "Dela Gothic One", sans-serif;
+    }
 
-	h2 {
-		@apply text-3xl font-semibold leading-tight;
-	}
+    h2 {
+        @apply text-3xl font-semibold leading-tight;
+    }
 
-	h3 {
-		@apply text-2xl font-semibold leading-snug;
-	}
-
-    a {
-        @apply text-blue-500 hover:text-blue-700 underline;
+    h3 {
+        @apply text-2xl font-semibold leading-snug;
     }
 
     li {
-        @apply list-disc ml-6;
+        
+    }
+
+    .dela-gothic-one-regular {
+        font-family: "Dela Gothic One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .cardo-regular {
+        font-family: "Cardo", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .cardo-bold {
+        font-family: "Cardo", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .cardo-regular-italic {
+        font-family: "Cardo", serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .font-outline-2 {
+        -webkit-text-stroke: 1px black;
+    }
+    .font-outline-4 {
+        -webkit-text-stroke: 4px black;
+    }
+    .text-outline {
+        text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
     }
 }

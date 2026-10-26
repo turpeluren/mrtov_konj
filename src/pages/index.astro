@@ -1,11 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import bgImage from '../assets/bg-home.png';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+import { type CollectionEntry, getCollection} from "astro:content";
+
+const allBands: CollectionEntry<"bios">[] = await getCollection("bios");
+
+const meta = {
+	description: "Artists of Мртов Коњ",
+	title: "ARTISTS",
+};
 ---
 
-<Layout>
-	<h1>Мртов Коњ</h1>
-	<a href="/bands/">Bands</a>
+<Layout bgImage={bgImage}>
+	<h1 class="text-center text-6xl dela-gothic-one-regular /text-outline /font-outline-2">АРТИСТИ / ARTISTS</h1>
+	<div class="grid grid-cols-3 gap-4 mt-8">
+		{
+			allBands.map(({ data, id }) => (
+					<a
+						class="block w-full flex flex-col items-center justify-center group"
+						data-astro-prefetch
+						href={`/artists/${id}/`}
+						title={`Show bio of ${data.name}`}
+					>
+						<div class="w-full aspect-[9/8] bg-white group-hover:rotate-6 transitions-all duration-200 ease-in-out" style={`background-image: url(${data.photo?.src}); background-size: cover; background-position: center;`} />
+						<div class="w-full relative flex justify-center">
+							<div class="absolute z-[-1] inset-0 bg-black opacity-50"></div>
+							<p class="text-5xl cardo-bold text-indigo-400 text-outline group-hover:brightness-125"> {data.name} </p>
+						</div>
+					</a>
+			))
+		}
+	</div>
 </Layout>
