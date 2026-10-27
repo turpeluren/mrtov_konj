@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+import notFound from '../assets/404.jpg';
+import beer from '../assets/beer.png';
+---
+
+<Layout bgImage={notFound}>
+	<h1 class="text-center text-6xl dela-gothic-one-regular /text-outline /font-outline-2">ЧЕТИРИСТО ЧЕТИРИ / 404</h1>
+    <div class="mt-16 flex justify-center">
+        <a href="https://bar.turpelurpeluren.online" target="_blank" title="Еве, земи пиво наместо тоа" class="flex flex-col items-center">
+            <Image src={beer} alt="ПИВО / BEER" class="w-96 mix-blend-lighten" />
+            <p class="text-white">Еве, земи пиво наместо тоа</p>
+        </a>
+    </div>
+</Layout>
