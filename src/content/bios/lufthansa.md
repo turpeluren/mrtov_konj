@@ -1,6 +1,8 @@
 ---
 name: LUFTHANSA
 genre: post punk/postrock
+font: cardo-regular
+color: "#F8A5FF"
 photo:
   src: /images/lufthansa.jpg
   alt: LUFTHANSA
