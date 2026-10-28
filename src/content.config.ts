@@ -28,7 +28,6 @@ const news = defineCollection({
 				.string()
 				.or(z.date())
 				.transform((val) => new Date(val)),
-			content: z.string(),
 			images: z
 				.array(z.object({
 					alt: z.string().optional(),

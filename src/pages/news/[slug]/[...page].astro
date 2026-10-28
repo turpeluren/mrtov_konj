@@ -2,9 +2,9 @@
 import Layout from '../../../layouts/Layout.astro';
 
 import type { GetStaticPaths } from "astro";
-import { type CollectionEntry, getCollection} from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = (async () => {
 	const allNews = await getCollection("news");
 
 	return allNews.map((news) => ({
@@ -13,14 +13,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		},
 		props: { news },
 	}));
-};
+}) satisfies GetStaticPaths;
 
 interface Props {
 	news: CollectionEntry<"news">;
 }
 
 const { news } = Astro.props as Props;
-const { title, date, content, images }  = news.data;
+const { title, date, images } = news.data;
+const { Content } = await render(news);
 
 ---
 
@@ -36,5 +37,7 @@ const { title, date, content, images }  = news.data;
 			}
 		</div>
 	)}
-	<p class="text-white">{content}</p>
+	<article class="prose">
+		<Content />
+	</article>
 </Layout>
