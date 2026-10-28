@@ -2,7 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 
 import type { GetStaticPaths } from "astro";
-import { type CollectionEntry, getCollection} from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const allBios = await getCollection("bios");
@@ -20,17 +20,22 @@ interface Props {
 }
 
 const { bio } = Astro.props as Props;
-const { name, bioText, links, photo, background }  = bio.data;
-
+const { name, genre, links, photo, background }  = bio.data;
+const { Content } = await render(bio);
 ---
 
 <Layout title={name} bgImage={background} bgOffsetX={background?.offsetX ?? 50} bgOffsetY={background?.offsetY ?? 0} bgRotation={background?.rotation ?? 0} bgSize={background?.scale ? background.scale*2*100 : 200}>
+	{genre && (
+		<p class="text-xl text-white text-center">{genre}</p>
+	)}
 	{photo && (
 		<div class="w-full aspect-video mb-4">
 			<img src={photo.src} alt={photo.alt} class="mb-4 w-full object-cover" />
 		</div>
 	)}
-	<p class="text-white">{bioText}</p>
+	<article class="prose">
+		<Content />
+	</article>
 	{links && links.length > 0 && (
 		<ul class="mt-4 text-white">
 			{links.map((link, index) => (

@@ -1,6 +1,6 @@
 ---
 name: Ture
-genre: website 
+genre: website maker
 photo:
   src: /images/gma.jpeg
   alt: me
