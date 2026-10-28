@@ -34,9 +34,10 @@ collections:
     label: "Archive"
     folder: "src/content/archive"
     create: false
-    identifier_field: images
+    identifier_field: title
     slug: "{{slug}}"
     fields:
+      - { label: "Title", name: "title", value: "Archive", widget: "hidden" }
       - { label: "Images", name: images, widget: list, required: false, fields: [
           { label: "Image", name: src, widget: image},
           { label: "Alternative text", name: alt, widget: string, required: false},
