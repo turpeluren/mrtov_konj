@@ -38,12 +38,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Images", name: images, widget: list, required: false, fields: [
-          { label: "Image", name: image, widget: object, fields: [
-            { label: "Image", name: src, widget: image},
-            { label: "Alternative text", name: alt, widget: string, required: false},
-            { label: "Date", name: "date", widget: "datetime", required: false},
-          ]}]
-        }
+          { label: "Image", name: src, widget: image},
+          { label: "Alternative text", name: alt, widget: string, required: false},
+          { label: "Date", name: "date", widget: "datetime", required: false},
+        ]}
 
 media_folder: "public/images" # Location where files will be stored in the repo
 public_folder: "/images" # The src attribute for uploaded media
