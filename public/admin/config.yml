@@ -17,6 +17,15 @@ collections:
       - { label: "Genre", name: genre, widget: string, required: false }
       - { label: "Image", name: photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
       - { label: "Links", name: links, widget: list, fields: [{ label: "Display text", name: name, widget: string}, {label: "Link", name: href, widget: string}], required: false}
+      - { label: "Albums", name: albums, widget: list, required: false, fields: [
+          { label: "Image", name: src, widget: image },
+          { label: "Album name", name: name, widget: string, required: false },
+          { label: "Link", name: href, widget: string, required: false }
+        ]}
+      - { label: "Video", name: video, widget: object, required: false, fields: [
+          { label: "Video URL", name: src, widget: string },
+          { label: "Alternative text", name: alt, widget: string, required: false }
+        ]}
       - { label: "Background", name: background, widget: object, required: false, fields: [
           { label: "Image", name: src, widget: image},
           { label: "Offset X", name: offsetX, widget: number, required: false},

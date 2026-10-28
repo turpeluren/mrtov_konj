@@ -16,6 +16,21 @@ const bios = defineCollection({
 			links: z
 				.array(z.object({ name: z.string(), href: z.string() }))
 				.optional(),
+			albums: z
+				.array(
+					z.object({
+						name: z.string().optional(),
+						href: z.string().optional(),
+						src: z.string(),
+					})
+				)
+				.optional(),
+			video: z
+				.object({
+					src: z.string(),
+					alt: z.string().optional(),
+				})
+				.optional(),
 			background: z
 				.object({
 					src: z.string(),
