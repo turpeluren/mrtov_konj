@@ -1,7 +1,6 @@
 ---
 name: Ture
-slug: ture
-bioText: Kvinnligt alibi
+genre: website 
 photo:
   src: /images/gma.jpeg
   alt: me
@@ -15,3 +14,4 @@ links:
   - name: https://turpelurpeluren.online
     href: https://turpelurpeluren.online
 ---
+Kvinnligt alibi

@@ -6,13 +6,13 @@ const bios = defineCollection({
 	schema: () =>
 		z.object({
 			name: z.string(),
+			genre: z.string().optional(),
 			photo: z
 				.object({
 					alt: z.string().optional(),
 					src: z.string(),
 				})
 				.optional(),
-			bioText: z.string().optional(),
 			links: z
 				.array(z.object({ name: z.string(), href: z.string() }))
 				.optional(),
