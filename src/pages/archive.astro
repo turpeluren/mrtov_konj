@@ -1,8 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import { type CollectionEntry, getCollection} from "astro:content";
+
+const allArchives: CollectionEntry<"archive">[] = await getCollection("archive");
+const archive = allArchives[0]; // There should be only one archive entry
+
+console.log(archive);
 ---
 
 <Layout title="АРХИВА / ARCHIVE">
-    
+    { archive.data.images && archive.data.images.length > 0 && (
+        <div class="grid grid-cols-1 gap-4 mt-8">
+            {
+                archive.data.images.map((image, index) => (
+                    <figure>
+                        <img src={image.src} alt={image.alt ?? ''} class="w-full object-cover" />
+                        { (image.alt || image.date) && (
+                            <figcaption class="text-white">{image.date && (<b>{new Date(image.date).toLocaleString()}{image.alt ? ':' : ''}</b>)} {image.alt}</figcaption>
+                        )}
+                    </figure>
+                ))
+            }
+        </div>
+    )}
 </Layout>

@@ -20,6 +20,18 @@
         
     }
 
+    figure {
+        @apply mb-4;
+    }
+
+    figure img {
+        @apply mb-0;
+    }
+
+    figcaption {
+        @apply text-white;
+    }
+
     .prose {
         @apply text-white;
     }

@@ -17,6 +17,7 @@ collections:
       - { label: "Bio", name: bioText, widget: text, required: false }
       - { label: "Image", name: photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
       - { label: "Links", name: links, widget: list, fields: [{ label: "Display text", name: name, widget: string}, {label: "Link", name: href, widget: string}], required: false}
+  
   - name: "news"
     label: "News"
     folder: "src/content/news"
@@ -28,6 +29,21 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Images", name: images, widget: list, fields: [{label: "Image", name: image, widget: object, fields: [{label: "Image", name: src, widget: image}, {label: "Alternative text", name: alt, widget: string, required: false}], required: false}]}
       - { label: "Content", name: body, widget: markdown }
+
+  - name: "archive"
+    label: "Archive"
+    folder: "src/content/archive"
+    create: false
+    identifier_field: title
+    slug: "{{slug}}"
+    fields:
+      - { label: "Images", name: images, widget: list, required: false, fields: [
+          { label: "Image", name: image, widget: object, fields: [
+            { label: "Image", name: src, widget: image},
+            { label: "Alternative text", name: alt, widget: string, required: false},
+            { label: "Date", name: "date", widget: "datetime", required: false},
+          ]}]
+        }
 
 media_folder: "public/images" # Location where files will be stored in the repo
 public_folder: "/images" # The src attribute for uploaded media

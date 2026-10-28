@@ -37,4 +37,21 @@ const news = defineCollection({
 		}),
 });
 
-export const collections = { bios, news };
+const archive = defineCollection({
+	loader: glob({ pattern: "**/*.md", base: "./src/content/archive" }),
+	schema: () =>
+		z.object({
+			images: z
+				.array(z.object({
+					alt: z.string().optional(),
+					src: z.string(),
+					date: z
+						.string()
+						.or(z.date())
+						.transform((val) => new Date(val))
+						.optional(),
+				})),
+		}),
+});
+
+export const collections = { bios, news, archive };
