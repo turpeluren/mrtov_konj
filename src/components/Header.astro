@@ -27,7 +27,7 @@ const buttonNavClass = 'text-2xl lg:text-lg text-black bg-cyan-200 rounded-full 
     </a>
 
     <!-- Nav -->
-    <nav id="nav" class="order-3 mt-12 mb-12 hidden w-full self-start lg:order-4 lg:mt-0 lg:mb-0 lg:block lg:w-auto lg:self-auto">
+    <nav id="nav" class="order-6 mt-12 mb-12 hidden w-full self-start lg:order-4 lg:mt-0 lg:mb-0 lg:block lg:w-auto lg:self-auto">
         <ul class="flex flex-col items-center justify-center space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0 xl:space-x-24">
             {navItems.map((item) => {
                 const isActive = url.pathname === item.href || (item.href !== '/' && url.pathname.startsWith(item.href)) || (item.href === '/' && url.pathname.startsWith('/artists/'));
