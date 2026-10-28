@@ -4,11 +4,12 @@ import GridCard from '../../components/GridCard.astro';
 
 import { type CollectionEntry, getCollection} from "astro:content";
 
+import bgImage from '../../assets/bg-news.png';
+
 const allNews: CollectionEntry<"news">[] = await getCollection("news");
 ---
 
-<Layout>
-    <h1 class="text-center text-6xl dela-gothic-one-regular /text-outline /font-outline-2">НОВОСТИ / NEWS</h1>
+<Layout bgImage={bgImage} title="НОВОСТИ / NEWS">
 	<div class="grid grid-cols-3 gap-4 mt-8">
 		{
 			allNews.map(({ data, id }) => (

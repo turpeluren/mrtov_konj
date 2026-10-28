@@ -2,7 +2,12 @@
 import "../styles/global.css";
 import Header from '../components/Header.astro';
 
-const { bgImage } = Astro.props;
+const { bgImage, title } = Astro.props;
+
+interface Props {
+	bgImage?: { src: string };
+	title?: string;
+}
 ---
 
 <!doctype html>
@@ -28,9 +33,12 @@ const { bgImage } = Astro.props;
 		<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body class="bg-black relative">
-		<div class="absolute z-[-1] inset-0 w-full h-full bg-cover bg-center min-h-screen backdrop-blur-sm brightness-50" style={ bgImage ? `background-image: url(${bgImage.src})` : ''} />
+		<div class="absolute z-[-1] inset-0 w-full h-full bg-cover min-h-screen backdrop-blur-sm brightness-70 bg-position-[50%_0%]" style={ bgImage ? `background-image: url(${bgImage.src})` : ''} />
 		<Header />
 		<div class="max-w-6xl mx-auto px-4 py-8">
+			{ title && 
+				<h1 class="text-center text-6xl dela-gothic-one-regular /text-outline /font-outline-2">{title}</h1>
+			}
 			<slot />
 		</div>
 	</body>

@@ -26,7 +26,7 @@ const buttonNavClass = 'text-lg text-black bg-cyan-200 rounded-full px-4 py-0.5 
     <nav class="">
         <ul class="self-center justify-self-center flex space-x-24 items-center">
             {navItems.map((item) => {
-                const isActive = url.pathname === item.href;
+                const isActive = url.pathname === item.href || (item.href !== '/' && url.pathname.startsWith(item.href)) || (item.href === '/' && url.pathname.startsWith('/artists/'));
                 return (
                     <li>
                         <a
