@@ -17,7 +17,14 @@ collections:
       - { label: "Bio", name: bioText, widget: text, required: false }
       - { label: "Image", name: photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
       - { label: "Links", name: links, widget: list, fields: [{ label: "Display text", name: name, widget: string}, {label: "Link", name: href, widget: string}], required: false}
-  
+      - { label: "Background", name: background, widget: object, required: false, fields: [
+          { label: "Image", name: src, widget: image},
+          { label: "Offset X", name: offsetX, widget: number, required: false},
+          { label: "Offset Y", name: offsetY, widget: number, required: false},
+          { label: "Rotation", name: rotation, widget: number, required: false},
+          { label: "Scale", name: scale, widget: number, required: false},
+        ]}
+
   - name: "news"
     label: "News"
     folder: "src/content/news"
