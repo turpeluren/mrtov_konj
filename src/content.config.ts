@@ -7,6 +7,8 @@ const bios = defineCollection({
 		z.object({
 			name: z.string(),
 			genre: z.string().optional(),
+			font: z.string().optional(),
+			color: z.string().optional(),
 			photo: z
 				.object({
 					alt: z.string().optional(),

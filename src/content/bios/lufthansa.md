@@ -26,6 +26,8 @@ background:
 ---
 Lufthansa are a Macedonian band with an experimental and aggressive spirit, which, by combining their loudness, anger, love and aggression, counteract the genre determinations, the one-dimensionality and conformism of manufactured monotonous music.Six sweaty friends who have been playing and working hard since the start of the pandemic, with 4 albums under their name, ready to tear out your ears, shake your bones and offer you a warm sonic hug.
 
+<br>
+
 Members:  
 Viktor Stojanovski - drums  
 Rade Bikovski - bass  
