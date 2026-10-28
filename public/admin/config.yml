@@ -2,7 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-publish_mode: editorial_workflow
+# Optional to turn on, but just requires more clicks to publish stuff
+# publish_mode: editorial_workflow
 
 collections:
   - name: "artists"
