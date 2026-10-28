@@ -9,11 +9,15 @@ These are the big new news for the unemployed.
 
 ## Smaller headers
 
-- lists
-- [links](https://mrtov-konj.netlify.app)
+* lists
+* [links](https://mrtov-konj.netlify.app)
 
 ### Even smaller headers
 
 1. numbered lists
 2. *cursive*
 3. **bold**
+
+#### Images
+
+![](/images/gma.jpeg "Images")
