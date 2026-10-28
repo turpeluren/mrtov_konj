@@ -24,36 +24,65 @@ const { name, genre, links, albums, video, photo, background }  = bio.data;
 const { Content } = await render(bio);
 ---
 
-<Layout title={name} bgImage={background} bgOffsetX={background?.offsetX ?? 50} bgOffsetY={background?.offsetY ?? 0} bgRotation={background?.rotation ?? 0} bgSize={background?.scale ? background.scale*2*100 : 200}>
-	{genre && (
-		<p class="text-xl text-white text-center">{genre}</p>
-	)}
-	{photo && (
-		<div class="w-full aspect-video mb-4">
-			<img src={photo.src} alt={photo.alt} class="mb-4 w-full object-cover" />
+<Layout bgImage={background} bgOffsetX={background?.offsetX ?? 50} bgOffsetY={background?.offsetY ?? 0} bgRotation={background?.rotation ?? 0} bgSize={background?.scale ? background.scale*2*100 : 200}>
+	<div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
+		<div class="order-2 lg:order-1 flex flex-col gap-4">
+			{photo && (
+				<div class="hidden lg:block w-full aspect-square mb-4">
+					<img src={photo.src} alt={photo.alt} class="mb-4 w-full object-cover" />
+				</div>
+			)}
+			{ albums && (
+				<div class="mb-4">
+					<h2 class="text-2xl text-white mb-2 text-center text-outline">DISCOGRAPHY</h2>
+				</div>
+				<div class="grid grid-cols-2 gap-4">
+					{albums.map((album) => (
+						<a href={album.href} title={album.name} target="_blank" rel="noopener noreferrer" class="">
+							<img src={album.src} alt={album.name} class="w-full h-full object-cover" />
+						</a>
+					))}
+				</div>
+			)}
 		</div>
-	)}
-	{ albums &&
-		<div class="grid grid-cols-2 gap-2">
-			{albums.map((album) => (
-				<a href={album.href} target="_blank" rel="noopener noreferrer" class="mb-4">
-					<img src={album.src} alt={album.name} class="w-full h-full object-cover" />
-				</a>
-			))}
+		<div class="order-1 lg:order-2 flex flex-col gap-4">
+			{photo && (
+				<div class="block lg:hidden w-full aspect-square mb-4">
+					<img src={photo.src} alt={photo.alt} class="mb-4 w-full object-cover" />
+				</div>
+			)}
+			<div>
+				<h1 class="text-4xl lg:text-6xl dela-gothic-one-regular /text-outline /font-outline-2">{name}</h1>
+				{genre && (
+					<p class="ml-4 lg:-ml-4 text-xl text-white">{genre}</p>
+				)}
+			</div>
+			<article class="prose">
+				<Content />
+			</article>
+			{ video && video.src && (
+				<div class="w-full aspect-video mt-4 bg-white/50">
+					<iframe
+						src={video.src}
+						title={video.alt ?? name}
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+						class="w-full h-full"
+					></iframe>
+				</div>
+			)}
+			{links && links.length > 0 && (
+				<ul class="mt-4 text-white">
+					{links.map((link, index) => (
+						<li>
+							<a href={link.href} class="hover:underline" target="_blank" rel="noopener noreferrer">
+								{link.name}
+							</a>
+						</li>
+					))}
+				</ul>
+			)}
 		</div>
-	}
-	<article class="prose">
-		<Content />
-	</article>
-	{links && links.length > 0 && (
-		<ul class="mt-4 text-white">
-			{links.map((link, index) => (
-				<li>
-					<a href={link.href} class="hover:underline" target="_blank" rel="noopener noreferrer">
-						{link.name}
-					</a>
-				</li>
-			))}
-		</ul>
-	)}
+	</div>
 </Layout>
