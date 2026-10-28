@@ -24,7 +24,10 @@ const news = defineCollection({
 	schema: () =>
 		z.object({
 			title: z.string(),
-			date: z.string().datetime(),
+			date: z
+				.string()
+				.or(z.date())
+				.transform((val) => new Date(val)),
 			content: z.string(),
 			images: z
 				.array(z.object({
