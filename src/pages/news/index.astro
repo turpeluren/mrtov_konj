@@ -10,7 +10,7 @@ const allNews: CollectionEntry<"news">[] = await getCollection("news");
 ---
 
 <Layout title="НОВОСТИ / NEWS" bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={0} bgSize={125}>
-	<div class="grid grid-cols-3 gap-4 mt-8">
+	<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8">
 		{
 			allNews.map(({ data, id }) => (
 				<GridCard
