@@ -16,18 +16,18 @@ const baseNavClass = 'text-2xl lg:text-lg text-white flex flex-col items-center 
 const buttonNavClass = 'text-2xl lg:text-lg text-black bg-cyan-200 rounded-full px-4 py-0.5 flex flex-col items-center leading-6 lg:leading-4 hover:bg-cyan-300 hover:text-gray-900';
 ---
 
-<div class="relative flex flex-wrap items-start justify-between gap-2 overflow-x-hidden px-6 pt-6 pb-4 lg:h-24 lg:items-center lg:px-6 lg:py-0">
+<div class="relative flex flex-wrap items-start justify-between gap-2 px-6 pt-6 pb-4 lg:h-24 lg:items-center lg:px-6 lg:py-0">
     <!-- Background blur -->
-    <div class="absolute -z-1 -left-[10%] top-[-80%] h-[200%] w-[120%] bg-black opacity-70 blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
+    <div class="order-1 absolute -z-1 top-[-80%] h-[200%] w-[100%] bg-black opacity-70 blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
 
     <!-- Logo -->
-    <a href="/" class="group order-3 lg:w-auto">
+    <a href="/" class="group order-2 lg:w-auto">
         <span class="text-2xl text-white dela-gothic-one-regular text-outline leading-3">МРТОВ<br>КОЊ</span>
         <span class="ml-1 hidden lg:inline-block text-[0.6rem] leading-2 px-1 py-0.5 bg-red-400 rounded-r-md rounded-bl-md mr-1.5 group-hover:mr-0 group-hover:ml-1.5 group-hover:pl-2 group-hover:rounded-bl-2xl transition-all ease-in-out">ГОЛА ПЛАНИНА <br> КОЛЕКТИВ</span>
     </a>
 
     <!-- Nav -->
-    <nav id="nav" class="order-7 mt-12 mb-12 hidden w-full self-start lg:order-4 lg:mt-0 lg:mb-0 lg:block lg:w-auto lg:self-auto">
+    <nav id="nav" class="order-5 mt-12 mb-12 hidden w-full self-start lg:order-4 lg:mt-0 lg:mb-0 lg:block lg:w-auto lg:self-auto">
         <ul class="flex flex-col items-center justify-center space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0 xl:space-x-24">
             {navItems.map((item) => {
                 const isActive = url.pathname === item.href || (item.href !== '/' && url.pathname.startsWith(item.href)) || (item.href === '/' && url.pathname.startsWith('/artists/'));
@@ -53,10 +53,10 @@ const buttonNavClass = 'text-2xl lg:text-lg text-black bg-cyan-200 rounded-full 
     </nav>
 
     <!-- Horse logo -->
-    <Image src={horse} alt="Мртов Коњ" class="order-5 hidden h-14 w-24 object-contain lg:block" />
+    <Image src={horse} alt="Мртов Коњ" class="order-3 hidden h-14 w-24 object-contain lg:block" />
 
     <!-- Hamburger menu -->
-    <div id="hamburger" class="group order-6 flex justify-end lg:hidden relative">
+    <div id="hamburger" class="group order-4 flex justify-end lg:hidden relative">
         <button class="w-9 h-9 grid grid-cols-1 grid-rows-3 gap-y-3 cursor-pointer group-[.active]:rotate-45 transitions-all duration-100"
             onclick="toggleNav()"
         >
