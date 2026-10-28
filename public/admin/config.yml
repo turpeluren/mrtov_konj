@@ -5,17 +5,28 @@ backend:
 publish_mode: editorial_workflow
 
 collections:
-  - name: "bands"
-    label: "Band bios"
+  - name: "artists"
+    label: "Artist bios"
     folder: "src/content/bios"
     create: true
     identifier_field: name
     slug: "{{slug}}"
     fields:
-      - { label: "Name", name: "name", widget: "string", hint: '' }
+      - { label: "Name", name: name, widget: string, hint: '' }
       - { label: "Bio", name: bioText, widget: text, required: false }
-      - { label: "Image", name: photo, widget: object, fields: [{label: "Bild", name: src, widget: image, required: false}, {label: "Alternativ text", name: alt, widget: string, required: false}]}
-      - { label: "Links", name: links, widget: list, fields: [{ label: Name, name: name, widget: string}, {label: Link, name: href, widget: string}], required: false}
+      - { label: "Image", name: photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
+      - { label: "Links", name: links, widget: list, fields: [{ label: "Display text", name: name, widget: string}, {label: "Link", name: href, widget: string}], required: false}
+  - name: "news"
+    label: "News"
+    folder: "src/content/news"
+    create: true
+    identifier_field: title
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Content", name: content, widget: markdown }
+      - { label: "Images", name: images, widget: list, fields: [{label: "Image", name: image, widget: object, fields: [{label: "Image", name: src, widget: image}, {label: "Alternative text", name: alt, widget: string, required: false}], required: false}]}
 
 media_folder: "public/images" # Location where files will be stored in the repo
 public_folder: "/images" # The src attribute for uploaded media

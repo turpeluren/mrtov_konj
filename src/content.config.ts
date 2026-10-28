@@ -19,4 +19,20 @@ const bios = defineCollection({
 		}),
 });
 
-export const collections = { bios };
+const news = defineCollection({
+	loader: glob({ pattern: "**/*.md", base: "./src/content/news" }),
+	schema: () =>
+		z.object({
+			title: z.string(),
+			date: z.string().datetime(),
+			content: z.string(),
+			images: z
+				.array(z.object({
+					alt: z.string().optional(),
+					src: z.string(),
+				}))
+				.optional(),
+		}),
+});
+
+export const collections = { bios, news };

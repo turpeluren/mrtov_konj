@@ -1,0 +1,40 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import type { GetStaticPaths } from "astro";
+import { type CollectionEntry, getCollection} from "astro:content";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const allNews = await getCollection("news");
+
+	return allNews.map((news) => ({
+		params: {
+			slug: news.id,
+		},
+		props: { news },
+	}));
+};
+
+interface Props {
+	news: CollectionEntry<"news">;
+}
+
+const { news } = Astro.props as Props;
+const { title, date, content, images }  = news.data;
+
+---
+
+<Layout>
+	<h1>{title}</h1>
+	<p class="text-white">{new Date(date).toLocaleString()}</p>
+	{images && images.length > 0 && (
+		<div class="w-full aspect-video mb-4">
+			{
+				images.map((image, index) => (
+					<img src={image.src} alt={image.alt} class="mb-4 w-full object-cover" />
+				))
+			}
+		</div>
+	)}
+	<p class="text-white">{content}</p>
+</Layout>
