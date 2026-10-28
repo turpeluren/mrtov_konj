@@ -2,7 +2,7 @@
 images:
   - image:
       src: /images/gma.jpeg
-      alt: me
+      alt: med3
   - image:
       src: /images/coece.jpg
       alt: Lea
