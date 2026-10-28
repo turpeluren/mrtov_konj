@@ -29,7 +29,7 @@ const bios = defineCollection({
 				.optional(),
 			video: z
 				.object({
-					src: z.string(),
+					src: z.string().optional(),
 					alt: z.string().optional(),
 				})
 				.optional(),
