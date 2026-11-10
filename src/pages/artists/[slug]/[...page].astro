@@ -77,10 +77,11 @@ const { Content } = await render(bio);
 				</div>
 			)}
 			{links && links.length > 0 && (
-				<ul class="mt-4 text-white">
+				<h2 class="text-2xl text-white mt-4 text-outline">{name.toUpperCase()}'S LINKS</h2>
+				<ul class="text-white">
 					{links.map((link, index) => (
-						<li>
-							<a href={link.href} class="hover:underline" target="_blank" rel="noopener noreferrer">
+						<li class="list-inside" style={`${color && `color: ${color};`}`}>
+							☠️ <a href={link.href} class="hover:underline" target="_blank" rel="noopener noreferrer">
 								{link.name}
 							</a>
 						</li>
