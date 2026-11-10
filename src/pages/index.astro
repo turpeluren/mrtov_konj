@@ -14,13 +14,17 @@ const meta = {
 ---
 
 <Layout title="АРТИСТИ / ARTISTS" bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={6} bgSize={175}>
-	<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8">
+	<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8 group/dagrid">
 		{
-			allBands.map(({ data, id }) => (
+			allBands.map(({ data, id }, index) => (
 				<GridCard
 					title={data.name}
 					image={data.photo}
 					href={`/artists/${id}/`}
+					font={data.font}
+					color={data.color}
+					topText={data.topText}
+					rotationAmount={index % 3 === 0 ? -8 : ( index % 3 === 2 ? 8 : 0 )}
 				/>
 			))
 		}

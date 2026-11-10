@@ -94,4 +94,12 @@ html {
             -1px 1px 0 #000,
             1px 1px 0 #000;
     }
+
+    .text-outline-2 {
+        text-shadow:
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
+    }
 }
