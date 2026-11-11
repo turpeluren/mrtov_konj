@@ -81,6 +81,32 @@ html {
         font-style: italic;
     }
 
+    .racing-sans-one-regular {
+        font-family: "Racing Sans One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .readex-pro {
+        font-family: "Readex Pro", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "HEXP" 0;
+    }
+
+    .katibeh-regular {
+        font-family: "Katibeh", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .leckerli-one-regular {
+        font-family: "Leckerli One", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
     .font-outline-2 {
         -webkit-text-stroke: 1px black;
     }

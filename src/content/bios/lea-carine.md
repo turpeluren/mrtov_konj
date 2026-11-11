@@ -2,6 +2,8 @@
 name: Lea Carine
 genre: muzik
 slug: lea-carine
+home_photo:
+  src: /images/coece.jpg
 photo:
   src: /images/coece.jpg
 links:

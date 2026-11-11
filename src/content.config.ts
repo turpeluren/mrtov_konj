@@ -10,6 +10,12 @@ const bios = defineCollection({
 			font: z.string().optional(),
 			color: z.string().optional(),
 			topText: z.boolean().optional(),
+			home_photo: z
+				.object({
+					alt: z.string().optional(),
+					src: z.string(),
+				})
+				.optional(),
 			photo: z
 				.object({
 					alt: z.string().optional(),

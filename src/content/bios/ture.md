@@ -1,11 +1,11 @@
 ---
-name: Vagina Coorporation
+name: ture
 genre: website maker
-font: cardo-regular-italic
+font: readex-pro
 topText: true
 color: "#fcd703"
 home_photo:
-  src: /images/vagina-corporation.jpg
+  src: /images/gma.jpeg
   alt: ""
 photo:
   src: /images/gma.jpeg
