@@ -2,6 +2,7 @@
 name: Vagina Coorporation
 genre: website maker
 font: cardo-regular-italic
+topText: true
 color: "#fcd703"
 photo:
   src: /images/gma.jpeg
