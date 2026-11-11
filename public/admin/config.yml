@@ -16,7 +16,7 @@ collections:
       - { label: "Name", name: name, widget: string, hint: '' }
       - { label: "Genre", name: genre, widget: string, required: false }
       - { label: "Font", name: font, widget: select, options: ["cardo-regular", "cardo-regular-italic", "cardo-bold", "dela-gothic-one-regular", "racing-sans-one-regular", "readex-pro", "leckerli-one-regular", "katibeh-regular"], required: false }
-      - { label: "Top text", name: topText, widget: boolean, default: true, required: false, hint: 'If checked, the title will be displayed at the top of the image instead of the bottom' }
+      - { label: "Top text", name: topText, widget: boolean, default: false, required: false, hint: 'If checked, the title will be displayed at the top of the image instead of the bottom' }
       - { label: "Color", name: color, widget: string, required: false, hint: 'Hex color code (e.g. #FF0000)' }
       - { label: "Homepage Image", name: home_photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
       - { label: "Image", name: photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
