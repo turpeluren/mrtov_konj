@@ -23,7 +23,7 @@ video:
 background:
   src: /images/bg-vagina-corp.jpg
   offsetX: 20
-  offsetY: 0
+  offsetY: 40
   rotation: 0
   scale: 1
 ---

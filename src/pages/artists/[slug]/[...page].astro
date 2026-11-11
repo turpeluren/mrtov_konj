@@ -30,7 +30,7 @@ const { Content } = await render(bio);
 		<div class="order-2 lg:order-1 flex flex-col gap-4">
 			{photo && (
 				<div class="hidden lg:block w-full aspect-square mb-4">
-					<img src={photo.src} alt={photo.alt} class="mb-4 w-full object-cover" />
+					<img src={photo.src} alt={photo.alt} class="mb-4 w-full h-full object-cover" />
 				</div>
 			)}
 			{ albums && (
@@ -58,7 +58,7 @@ const { Content } = await render(bio);
 		<div class="order-1 lg:order-2 flex flex-col gap-4">
 			{photo && (
 				<div class="block lg:hidden w-full aspect-square mb-4">
-					<img src={photo.src} alt={photo.alt} class="mb-4 w-full object-cover" />
+					<img src={photo.src} alt={photo.alt} class="mb-4 w-full h-full object-cover" />
 				</div>
 			)}
 			<div>
