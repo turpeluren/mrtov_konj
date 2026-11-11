@@ -1,9 +1,6 @@
 ---
 title: ARCHIVE IMAGES
 images:
-  -   src: /images/gma.jpeg
-      alt: med3
-  -   src: /images/coece.jpg
-      alt: Lea
-      date: 2026-10-28T11:46:00.000+01:00
+  - src: /images/07962fa56f655b46ed7140290796e3a9b7bea7ed.jpg
+  - src: /images/bbe34e5bc1481f254ce18525e2ec1437a91fa4b1.jpg
 ---
