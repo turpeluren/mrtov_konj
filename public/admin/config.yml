@@ -27,11 +27,11 @@ collections:
           { label: "Link", name: href, widget: string, required: false }
         ]}
       - { label: "Video", name: video, widget: object, required: false, fields: [
-          { label: "Video URL", name: src, widget: string },
+          { label: "Video URL", name: src, widget: string, required: false },
           { label: "Alternative text", name: alt, widget: string, required: false }
         ]}
       - { label: "Background", name: background, widget: object, required: false, fields: [
-          { label: "Image", name: src, widget: image},
+          { label: "Image", name: src, widget: image, required: false},
           { label: "Offset X", name: offsetX, widget: number, required: false},
           { label: "Offset Y", name: offsetY, widget: number, required: false},
           { label: "Rotation", name: rotation, widget: number, required: false},
