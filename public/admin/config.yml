@@ -48,7 +48,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Images", name: images, widget: list, fields: [{label: "Image", name: image, widget: object, fields: [{label: "Image", name: src, widget: image}, {label: "Alternative text", name: alt, widget: string, required: false}], required: false}]}
+      - { label: "Images", name: images, widget: list, fields: [{label: "Image", name: src, widget: image}, {label: "Alternative text", name: alt, widget: string, required: false}]}
       - { label: "Content", name: body, widget: markdown }
 
   - name: "archive"
