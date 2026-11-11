@@ -4,6 +4,9 @@ genre: website maker
 font: cardo-regular-italic
 topText: true
 color: "#fcd703"
+home_photo:
+  src: /images/vagina-corporation.jpg
+  alt: ""
 photo:
   src: /images/gma.jpeg
   alt: me
