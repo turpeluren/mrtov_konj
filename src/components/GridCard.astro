@@ -20,10 +20,11 @@ const { title, tooltip, href, image, font, color, topText=false, rotationAmount=
     href={href}
     title={tooltip ? tooltip : title}
 >
-    <div class="w-full h-full aspect-9/8 group relative">
-        <div class={`w-full h-full inset-0 flex justify-center bg-white group-hover:scale-101 perspective-distant lg:perspective-near ${rotationAmount === 8 ? 'group-hover:rotate-y-8' : rotationAmount === -8 ? 'group-hover:-rotate-y-8' : rotationAmount == 35 ? 'group-hover:rotate-y-35' : 'group-hover:rotate-y-0'} group-hover:-rotate-x-12 transform-3d transitions-all duration-500 ease-in-out`} 
+    <div class="w-full h-full aspect-9/8 group relative transform-3d perspective-distant lg:perspective-normal hover:z-10">
+        <div class={`absolute w-full h-full inset-0 -translate-z-2 bg-black scale-105 ${rotationAmount === 8 ? 'group-hover:rotate-y-25' : rotationAmount === -8 ? 'group-hover:-rotate-y-8' : rotationAmount == 35 ? 'group-hover:rotate-y-8' : 'group-hover:rotate-y-0'} group-hover:-rotate-x-12 transform-3d transitions-all duration-500 ease-in-out`} />
+        <div class={`w-full h-full inset-0 flex justify-center bg-white group-hover:scale-101 ${rotationAmount === 8 ? 'group-hover:rotate-y-25' : rotationAmount === -8 ? 'group-hover:-rotate-y-8' : rotationAmount == 35 ? 'group-hover:rotate-y-8' : 'group-hover:rotate-y-0'} group-hover:-rotate-x-12 transform-3d transitions-all duration-500 ease-in-out`} 
             style={`background-image: url(${image?.src}); background-size: cover; background-position: center;`}>
-            <p class={`text-5xl ${font ? font : 'dela-gothic-one-regular'} ${topText ? 'self-start' : 'self-end'} text-indigo-400 text-center text-outline-2 group-hover:rotate-z-0 translate-z-8 ${topText ? 'translate-y-4' : '-translate-y-4'} transform-3d group-hover:brightness-125 transitions-all duration-200`}
+            <p class={`text-4xl max-w-[80%] ${font ? font : 'dela-gothic-one-regular'} ${topText ? 'self-start' : 'self-end'} text-indigo-400 text-center text-outline-2 group-hover:rotate-z-0 translate-z-24 ${topText ? 'translate-y-8' : '-translate-y-8'} transform-3d group-hover:brightness-125 transitions-all duration-200`}
                 style={`${color && `color: ${color};`}`}
             > {title} </p>
         </div>
