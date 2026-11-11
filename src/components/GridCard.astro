@@ -20,16 +20,16 @@ const { title, tooltip, href, image, font, color, topText=false, rotationAmount=
     href={href}
     title={tooltip ? tooltip : title}
 >
-    { image &&
-        <div class="w-full h-full aspect-9/8 group relative">
-            <div class={`w-full h-full inset-0 flex justify-center bg-white group-hover:scale-101 perspective-distant lg:perspective-near ${rotationAmount === 8 ? 'group-hover:rotate-y-8' : rotationAmount === -8 ? 'group-hover:-rotate-y-8' : rotationAmount == 35 ? 'group-hover:rotate-y-35' : 'group-hover:rotate-y-0'} group-hover:-rotate-x-12 transform-3d transitions-all duration-500 ease-in-out`} 
-                style={`background-image: url(${image.src}); background-size: cover; background-position: center;`}>
-                <p class={`text-5xl ${font ? font : 'dela-gothic-one-regular'} ${topText ? 'self-start' : 'self-end'} text-indigo-400 text-center text-outline-2 group-hover:rotate-z-0 translate-z-8 -translate-y-4 transform-3d group-hover:brightness-125 transitions-all duration-200`}
-                    style={`${color && `color: ${color};`}`}
-                > {title} </p>
-            </div>
+    <div class="w-full h-full aspect-9/8 group relative">
+        <div class={`w-full h-full inset-0 flex justify-center bg-white group-hover:scale-101 perspective-distant lg:perspective-near ${rotationAmount === 8 ? 'group-hover:rotate-y-8' : rotationAmount === -8 ? 'group-hover:-rotate-y-8' : rotationAmount == 35 ? 'group-hover:rotate-y-35' : 'group-hover:rotate-y-0'} group-hover:-rotate-x-12 transform-3d transitions-all duration-500 ease-in-out`} 
+            style={`background-image: url(${image?.src}); background-size: cover; background-position: center;`}>
+            <p class={`text-5xl ${font ? font : 'dela-gothic-one-regular'} ${topText ? 'self-start' : 'self-end'} text-indigo-400 text-center text-outline-2 group-hover:rotate-z-0 translate-z-8 ${topText ? 'translate-y-4' : '-translate-y-4'} transform-3d group-hover:brightness-125 transitions-all duration-200`}
+                style={`${color && `color: ${color};`}`}
+            > {title} </p>
         </div>
-    }
+    </div>
+    
+    <!-- Old method with text below image -->
     <!--div class="w-full relative flex justify-center">
         <div class="absolute z-[-1] inset-0 bg-black opacity-50"></div>
         <p class="text-5xl cardo-bold text-indigo-400 text-outline group-hover:brightness-125"> {title} </p>
