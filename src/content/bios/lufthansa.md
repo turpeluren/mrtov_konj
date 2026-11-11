@@ -3,8 +3,10 @@ name: LUFTHANSA
 genre: post punk/postrock
 font: cardo-regular
 color: "#F8A5FF"
-photo:
+home_photo:
   src: /images/lufthansa.jpg
+photo:
+  src: /images/lufthansa2.jpg
   alt: LUFTHANSA
 albums:
   - href: https://lufthansa.bandcamp.com/album/daleku-od-vistinskoto-neshto
