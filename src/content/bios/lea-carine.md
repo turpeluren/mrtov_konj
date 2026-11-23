@@ -12,7 +12,14 @@ links:
   bandcamp: https://leacarine.bandcamp.com/album/lea-carine
 background:
   src: /images/pozadina-bandacamp.jpg
+<<<<<<< HEAD
   scale: ""
+=======
+  offsetX: -50
+  offsetY: 0
+  rotation: 0
+  scale: 0.5
+>>>>>>> e32a0a8 (lea carine background alignment)
 ---
 In the battle against an identity crisis—and against all the parasites feeding
 on it—Lea Karin roams into battle using her cardboard sword and clay horse.
