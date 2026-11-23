@@ -8,7 +8,7 @@ home_photo:
 albums:
   - src: /images/a1256451191_10.jpg
 video:
-  src: https://youtu.be/QAoHdqv3qj0?si=Gm_19NGuFasjUzOA
+  src: https://www.youtube.com/embed/QAoHdqv3qj0?si=l-uqR6z8_MWWiMHM
 background:
   src: /images/pozadina-gv.jpg
 ---
