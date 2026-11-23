@@ -11,9 +11,14 @@ photo:
   src: /images/gma.jpeg
   alt: me
 links:
+  website: https://turpelurpeluren.online
+  youtube: https://www.youtube.com/watch?v=NESBtODxNVA&list=LL&index=22&t=8s
+  spotify: https://open.spotify.com/album/3Hpc3zbtxqUHuuhiEmoIhg
+  instagram: https://www.instagram.com/turpelurpeluren/
+  bandcamp: https://leacarine.bandcamp.com/album/lea-carine
   additionalLinks:
-    - name: https://turpelurpeluren.online
-      href: https://turpelurpeluren.online
+    - name: https://blog.turpelurpeluren.online
+      href: https://blog.turpelurpeluren.online
 video:
   src: https://www.youtube.com/embed/mFTtB__aMNE?si=EDwlN69Tul9aswNQ
   alt: Rave sim 2d

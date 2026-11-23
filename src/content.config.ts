@@ -24,6 +24,7 @@ const bios = defineCollection({
 				.optional(),
 			links: z
 				.object({
+					website: z.string().optional(),
 					spotify: z.string().optional(),
 					youtube: z.string().optional(),
 					bandcamp: z.string().optional(),

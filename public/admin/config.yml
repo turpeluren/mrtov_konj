@@ -18,9 +18,10 @@ collections:
       - { label: "Font", name: font, widget: select, options: ["cardo-regular", "cardo-regular-italic", "cardo-bold", "dela-gothic-one-regular", "racing-sans-one-regular", "readex-pro", "leckerli-one-regular", "katibeh-regular"], required: false }
       - { label: "Top text", name: topText, widget: boolean, default: false, required: false, hint: 'If checked, the title will be displayed at the top of the image instead of the bottom' }
       - { label: "Color", name: color, widget: string, required: false, hint: 'Hex color code (e.g. #FF0000)' }
-      - { label: "Homepage Image", name: home_photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
+      - { label: "Artist Page Image", name: home_photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
       - { label: "Image", name: photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
       - { label: "Links", name: links, widget: object, fields: [
+          { label: "Website", name: website, widget: string, required: false },
           { label: "Spotify", name: spotify, widget: string, required: false },
           { label: "YouTube", name: youtube, widget: string, required: false },
           { label: "Bandcamp", name: bandcamp, widget: string, required: false },

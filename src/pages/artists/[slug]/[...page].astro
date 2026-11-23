@@ -5,6 +5,8 @@ import GridCard from '../../../components/GridCard.astro';
 import type { GetStaticPaths } from "astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 
+import { Icon } from "astro-icon/components";
+
 export const getStaticPaths: GetStaticPaths = async () => {
 	const allBios = await getCollection("bios");
 
@@ -40,7 +42,7 @@ const { Content } = await render(bio);
 				</div>
 				
 				<div class="grid grid-cols-2 gap-4">
-					{albums.map((album) => (
+					{albums.map((album: { src: string; name: string; href: string }) => (
 		
 						<GridCard
 							title=""
@@ -88,10 +90,28 @@ const { Content } = await render(bio);
 					></iframe>
 				</div>
 			)}
-			{links && links.length > 0 && (
+			{ links && (
 				<h2 class="text-2xl text-white mt-4 text-outline">{name.toUpperCase()}'S LINKS</h2>
-				<ul class="text-white">
-					{links.map((link, index) => (
+				<ul class="text-white list-inside space-y-2 text-2xl lg:text-lg">
+					<div class="flex gap-3 flex-wrap">
+						{ links.website && (
+							<a href={links.website} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="lucide:globe"/></a>
+						)}
+						{ links.bandcamp && ( 
+							<a href={links.bandcamp} class="hover:underline hover:brightness-75  bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:bandcamp"/></a>
+						)}
+						{ links.instagram && (
+							<a href={links.instagram} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:instagram"/></a>
+						)}
+						{ links.spotify && (
+							<a href={links.spotify} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:spotify"/></a>
+						)}
+						{ links.youtube && (	
+							<a href={links.youtube} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:youtube"/></a>
+						)}
+					</div>
+					{ links.additionalLinks && links.additionalLinks.length > 0 && 
+						links.additionalLinks.map((link: { name: string; href: string }, index: number) => (
 						<li class="list-inside" style={`${color && `color: ${color};`}`}>
 							☠️ <a href={link.href} class="hover:underline" target="_blank" rel="noopener noreferrer">
 								{link.name}
