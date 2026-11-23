@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+
+const year = new Date().getFullYear();
+
+const links = {
+    bandcamp: "https://mrtovkonj.bandcamp.com/",
+    instagram: "https://www.instagram.com/mrtov_konj/",
+    youtube: "https://www.youtube.com/@mrtovkonjrecords",
+    facebook: "https://www.facebook.com/profile.php?id=61557186780927",
+};
+---
+
+<div class="w-full relative overflow-hidden pt-20">
+    <!-- Background blur -->
+    <div class="order-1 inset-0 absolute -z-1 left-0 top-0 translate-y-24 h-[150%] w-full bg-black opacity-70 blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
+
+    <footer
+        class="w-full flex flex-col items-center justify-center text-center gap-y-2 py-4 text-white"
+    >
+        <div class="flex flex-col items-end">
+            <nav
+                aria-label="Socials"
+                class="flex gap-x-3"
+            >
+                { links.bandcamp && ( 
+                    <a href={links.bandcamp} class="hover:underline hover:brightness-75  bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:bandcamp"/></a>
+                )}
+                { links.instagram && (
+                    <a href={links.instagram} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:instagram"/></a>
+                )}
+                { links.youtube && (
+                    <a href={links.youtube} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:youtube"/></a>
+                )}
+                { links.facebook && (	
+                    <a href={links.facebook} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:facebook"/></a>
+                )}
+            </nav>
+        </div>
+        <div class="text-center sm:text-left">
+            &copy; Mrtov Konj {year}.
+            <!--span class="inline-block">sida av <a class="text-link underline sm:no-underline hover:underline" href="https://turpelurpeluren.online">turpelurpeluren</a>.</span-->
+        </div>
+    </footer>
+</div>
