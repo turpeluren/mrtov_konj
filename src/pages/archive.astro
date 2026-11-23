@@ -13,11 +13,14 @@ console.log(archive);
     { archive.data.images && archive.data.images.length > 0 && (
         <div class="grid grid-cols-1 gap-4 mt-8">
             {
-                archive.data.images.map((image, index) => (
+                archive.data.images.map((image : { src: string; alt?: string; photographer?: string; date?: string }, index: number) => (
                     <figure>
                         <img src={image.src} alt={image.alt ?? ''} class="w-full object-cover" />
-                        { (image.alt || image.date) && (
-                            <figcaption class="text-white">{image.date && (<b>{new Date(image.date).toLocaleString()}{image.alt ? ':' : ''}</b>)} {image.alt}</figcaption>
+                        { (image.photographer || image.date) && (
+                            <figcaption class="text-white">
+                                {image.date && (<b>{new Date(image.date).toLocaleString()} {image.alt ? ':' : ''} </b>)}
+                                {image.photographer && (<span>Photo: {image.photographer}</span>)}
+                            </figcaption>
                         )}
                     </figure>
                 ))
