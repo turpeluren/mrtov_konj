@@ -1,13 +1,17 @@
 ---
 name: Lea Carine
 genre: muzik
-slug: lea-carine
 home_photo:
   src: /images/coece.jpg
 photo:
   src: /images/coece.jpg
+albums:
+  - src: /images/album-cover-final-final.png
+slug: lea-carine
 links:
   bandcamp: https://leacarine.bandcamp.com/album/lea-carine
+background:
+  src: /images/pozadina-bandacamp.jpg
 ---
 In the battle against an identity crisis—and against all the parasites feeding
 on it—Lea Karin roams into battle using her cardboard sword and clay horse.
