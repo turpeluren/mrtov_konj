@@ -9,7 +9,7 @@ home_photo:
   alt: ""
 photo:
   src: /images/vagina-corporation2.jpg
-  alt: myes
+  alt: ""
 albums:
   - src: /images/dali-ova-e-zhivo-.jpg
   - src: /images/c98c530b902da79eca15f63142cc57a0c7171c18.jpg

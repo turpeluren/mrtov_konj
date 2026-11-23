@@ -9,114 +9,123 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 import { Icon } from "astro-icon/components";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const allBios = await getCollection("bios");
+    const allBios = await getCollection("bios");
 
-	return allBios.map((bio) => ({
-		params: {
-			slug: bio.id,
-		},
-		props: { bio },
-	}));
+    return allBios.map((bio) => ({
+        params: {
+            slug: bio.id,
+        },
+        props: { bio },
+    }));
 };
 
 interface Props {
-	bio: CollectionEntry<"bios">;
+    bio: CollectionEntry<"bios">;
 }
 
 const { bio } = Astro.props as Props;
 const { name, genre, font, color, links, albums, video, photo, background }  = bio.data;
 const { Content } = await render(bio);
+
+console.log(photo);
 ---
 
 <Layout bgImage={background} bgOffsetX={background?.offsetX ?? 50} bgOffsetY={background?.offsetY ?? 0} bgRotation={background?.rotation ?? 0} bgSize={background?.scale ? background.scale*2*100 : 200}>
-	<div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
-		<div class="order-2 lg:order-1 flex flex-col gap-4">
-			{photo && (
-				<div class="hidden lg:block w-full aspect-square mb-4">
-					<img src={photo.src} alt={photo.alt} class="mb-4 w-full h-full object-cover" />
-				</div>
-			)}
-			{ albums && (
-				<>
-				<div class="mb-4">
-					<h2 class="text-2xl text-white mb-2 text-center text-outline">DISCOGRAPHY</h2>
-				</div>
-				
-				<div class="grid grid-cols-2 gap-4">
-					{albums.map((album: { src: string; name: string; href: string }) => (
-		
-						<Album
-							title={album.name}
-							image={{ src: album.src, alt: album.name }}
-							href={album.href ? album.href : '#'}
-							rotationAmount={35}
-						/>
-					))}
-				</div>
-				</>
-			)}
-		</div>
-		<div class="order-1 lg:order-2 flex flex-col gap-4">
-			{photo && (
-				<div class="block lg:hidden w-full aspect-square mb-4">
-					<img src={photo.src} alt={photo.alt} class="mb-4 w-full h-full object-cover" />
-				</div>
-			)}
-			<div>
-				<h1 class={`text-4xl lg:text-6xl leading-6 lg:leading-12 ${font ? font : 'dela-gothic-one-regular'} ${color ? '' : 'text-indigo-400'} /text-outline /font-outline-2`}
-				 	style={`${color && `color: ${color};`}`}
-				>{name}</h1>
-				{genre && (
-					<p class={`ml-4 lg:-ml-4 -mt-1 lg:-mt-2 text-2xl ${font ? font : 'dela-gothic-one-regular'} ${color ? '' : 'text-indigo-400'}`}
-						style={`${color && `color: ${color};`}`}
-					>{genre}</p>
-				)}
-			</div>
-			<article class="prose">
-				<Content />
-			</article>
-			{ video && video.src && (
-				<div class="w-full aspect-video mt-4 bg-white/50">
-					<iframe
-						src={video.src}
-						title={video.alt ?? name}
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-						class="w-full h-full"
-					></iframe>
-				</div>
-			)}
-			{ links && (
-				<h2 class="text-2xl text-white mt-4 text-outline">{name.toUpperCase()}'S LINKS</h2>
-				<ul class="text-white list-inside space-y-2 text-2xl lg:text-lg">
-					<div class="flex gap-3 flex-wrap">
-						{ links.website && (
-							<a href={links.website} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="lucide:globe"/></a>
-						)}
-						{ links.bandcamp && ( 
-							<a href={links.bandcamp} class="hover:underline hover:brightness-75  bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:bandcamp"/></a>
-						)}
-						{ links.instagram && (
-							<a href={links.instagram} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:instagram"/></a>
-						)}
-						{ links.spotify && (
-							<a href={links.spotify} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:spotify"/></a>
-						)}
-						{ links.youtube && (	
-							<a href={links.youtube} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:youtube"/></a>
-						)}
-					</div>
-					{ links.additionalLinks && links.additionalLinks.length > 0 && 
-						links.additionalLinks.map((link: { name: string; href: string }, index: number) => (
-						<li class="list-inside" style={`${color && `color: ${color};`}`}>
-							☠️ <a href={link.href} class="hover:underline" target="_blank" rel="noopener noreferrer">
-								{link.name}
-							</a>
-						</li>
-					))}
-				</ul>
-			)}
-		</div>
-	</div>
+    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="order-2 lg:order-1 flex flex-col gap-4">
+            {photo && (
+                <div class="hidden lg:block w-full aspect-square mb-4">
+                    <figure class="w-full h-full">
+                        <img src={photo.src} alt={photo.alt} class=" w-full h-full object-cover" />
+                        { photo.photographer && (
+                            <figcaption class="text-white">
+                                <span>Photo: {photo.photographer}</span>
+                            </figcaption>
+                        )}
+                    </figure>
+                </div>
+            )}
+            { albums && (
+                <>
+                <div class="mb-4">
+                    <h2 class="text-2xl text-white mb-2 text-center text-outline">DISCOGRAPHY</h2>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    {albums.map((album: { src: string; name: string; href: string }) => (
+        
+                        <Album
+                            title={album.name}
+                            image={{ src: album.src, alt: album.name }}
+                            href={album.href ? album.href : '#'}
+                            rotationAmount={35}
+                        />
+                    ))}
+                </div>
+                </>
+            )}
+        </div>
+        <div class="order-1 lg:order-2 flex flex-col gap-4">
+            {photo && (
+                <div class="block lg:hidden w-full aspect-square mb-4">
+                    <img src={photo.src} alt={photo.alt} class="mb-4 w-full h-full object-cover" />
+                </div>
+            )}
+            <div>
+                <h1 class={`text-4xl lg:text-6xl leading-6 lg:leading-12 ${font ? font : 'dela-gothic-one-regular'} ${color ? '' : 'text-indigo-400'} /text-outline /font-outline-2`}
+                     style={`${color && `color: ${color};`}`}
+                >{name}</h1>
+                {genre && (
+                    <p class={`ml-4 lg:-ml-4 -mt-1 lg:-mt-2 text-2xl ${font ? font : 'dela-gothic-one-regular'} ${color ? '' : 'text-indigo-400'}`}
+                        style={`${color && `color: ${color};`}`}
+                    >{genre}</p>
+                )}
+            </div>
+            <article class="prose">
+                <Content />
+            </article>
+            { video && video.src && (
+                <div class="w-full aspect-video mt-4 bg-white/50">
+                    <iframe
+                        src={video.src}
+                        title={video.alt ?? name}
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        class="w-full h-full"
+                    ></iframe>
+                </div>
+            )}
+            { links && (
+                <h2 class="text-2xl text-white mt-4 text-outline">{name.toUpperCase()}'S LINKS</h2>
+                <ul class="text-white list-inside space-y-2 text-2xl lg:text-lg">
+                    <div class="flex gap-3 flex-wrap">
+                        { links.website && (
+                            <a href={links.website} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="lucide:globe"/></a>
+                        )}
+                        { links.bandcamp && ( 
+                            <a href={links.bandcamp} class="hover:underline hover:brightness-75  bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:bandcamp"/></a>
+                        )}
+                        { links.instagram && (
+                            <a href={links.instagram} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:instagram"/></a>
+                        )}
+                        { links.spotify && (
+                            <a href={links.spotify} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:spotify"/></a>
+                        )}
+                        { links.youtube && (    
+                            <a href={links.youtube} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:youtube"/></a>
+                        )}
+                    </div>
+                    { links.additionalLinks && links.additionalLinks.length > 0 && 
+                        links.additionalLinks.map((link: { name: string; href: string }, index: number) => (
+                        <li class="list-inside" style={`${color && `color: ${color};`}`}>
+                            ☠️ <a href={link.href} class="hover:underline" target="_blank" rel="noopener noreferrer">
+                                {link.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    </div>
 </Layout>
