@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import GridCard from '../../../components/GridCard.astro';
+import Album from '../../../components/Album.astro';
 
 import type { GetStaticPaths } from "astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
@@ -44,14 +45,10 @@ const { Content } = await render(bio);
 				<div class="grid grid-cols-2 gap-4">
 					{albums.map((album: { src: string; name: string; href: string }) => (
 		
-						<GridCard
-							title=""
-							tooltip={album.name}
+						<Album
+							title={album.name}
 							image={{ src: album.src, alt: album.name }}
 							href={album.href ? album.href : '#'}
-							font={font}
-							color={color}
-							topText={true}
 							rotationAmount={35}
 						/>
 					))}

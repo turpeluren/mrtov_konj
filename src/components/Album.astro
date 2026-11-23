@@ -1,0 +1,24 @@
+---
+
+interface Props {
+    title: string;
+    href: string;
+    image?: { src: string, alt?: string };
+    rotationAmount?: -8 | 0  | 8 | 35;
+}
+
+const { title, href, image, rotationAmount=4 } = Astro.props as Props; 
+---
+
+<a
+    class="w-full flex flex-col items-center justify-center group"
+    data-astro-prefetch
+    href={href}
+    title={title}
+>
+    <div class="w-full h-full aspect-square group relative transform-3d perspective-distant lg:perspective-normal hover:z-10">
+        <div class={`w-full h-full inset-0 flex justify-center bg-white group-hover:scale-101 ${rotationAmount === 8 ? 'group-hover:rotate-y-25' : rotationAmount === -8 ? 'group-hover:-rotate-y-8' : rotationAmount == 35 ? 'group-hover:rotate-y-8' : 'group-hover:rotate-y-0'} group-hover:-rotate-x-12 transform-3d transitions-all duration-500 ease-in-out`} 
+            style={`background-image: url(${image?.src}); background-size: cover; background-position: center;`}>
+        </div>
+    </div>
+</a>
