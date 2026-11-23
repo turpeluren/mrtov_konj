@@ -9,6 +9,8 @@ photo:
   src: /images/clen16.jpg
 albums:
   - src: /images/dora.jpg
+video:
+  src: https://youtu.be/pIWx-z43BQg?si=tKaSzxYORCqXWXtu
 background:
   src: /images/471224438_9698984313449199_6108008812397258047_n.jpg
 ---
