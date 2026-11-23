@@ -1,7 +1,7 @@
 ---
 name: CHLEN 16
 genre: INDUSTRIAL
-font: leckerli-one-regular
+font: readex-pro
 topText: false
 home_photo:
   src: /images/clen16.jpg
