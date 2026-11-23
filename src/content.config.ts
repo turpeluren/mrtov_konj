@@ -20,6 +20,7 @@ const bios = defineCollection({
 				.object({
 					alt: z.string().optional(),
 					src: z.string(),
+					photographer: z.string().optional(),
 				})
 				.optional(),
 			links: z
@@ -90,6 +91,7 @@ const archive = defineCollection({
 				.array(z.object({
 					alt: z.string().optional(),
 					src: z.string(),
+					photographer: z.string().optional(),
 					date: z
 						.string()
 						.or(z.date())
