@@ -4,7 +4,7 @@ import horse from '../assets/mrtov_konj-logo.png';
 
 const url = new URL(Astro.request.url);
 
-const navItems = [
+const navItems : { href: string; mk: string; en: string; button?: boolean }[] = [
   { href: '/artists/', mk: 'АРТИСТИ', en: 'ARTISTS' },
   { href: '/', mk: 'НОВОСТИ', en: 'NEWS' },
   /*{ href: '/shop/', mk: 'КУПИ', en: 'SHOP' },*/
