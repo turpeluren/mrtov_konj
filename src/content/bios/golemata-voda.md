@@ -3,6 +3,7 @@ name: Golemata Voda
 genre: alternative rock, midwest-emo
 font: racing-sans-one-regular
 topText: false
+color: "#9E2C40"
 home_photo:
   src: /images/a000495-r1-36-37.jpg
 albums:
