@@ -1,31 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import bgImage from '../assets/bg-home.png';
 import GridCard from '../components/GridCard.astro';
 
 import { type CollectionEntry, getCollection} from "astro:content";
 
-const allBands: CollectionEntry<"bios">[] = await getCollection("bios");
+import bgImage from '../assets/bg-news.png';
 
-const meta = {
-	description: "Artists of Мртов Коњ",
-	title: "ARTISTS",
-};
+const allNews: CollectionEntry<"news">[] = await getCollection("news");
 ---
 
-<Layout title="АРТИСТИ / ARTISTS" bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={6} bgSize={175}>
-	<div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-8 group/dagrid">
+<Layout title="НОВОСТИ / NEWS" bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={0} bgSize={125}>
+	<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8">
 		{
-			allBands.map(({ data, id }, index) => (
+			allNews.map(({ data, id }) => (
 				<GridCard
-					title={data.name}
-					image={data.home_photo}
-					href={`/artists/${id}/`}
-					font={data.font}
-					color={data.color}
-					topText={data.topText}
-					rotationAmount={index % 3 === 0 ? -8 : ( index % 3 === 2 ? 8 : 0 )}
-				/>
+                    title={data.title}
+                    image={data.images?.[0]}
+                    href={`/news/${id}/`}
+                />
 			))
 		}
 	</div>

@@ -5,8 +5,8 @@ import horse from '../assets/mrtov_konj-logo.png';
 const url = new URL(Astro.request.url);
 
 const navItems = [
-  { href: '/', mk: 'АРТИСТИ', en: 'ARTISTS' },
-  { href: '/news/', mk: 'НОВОСТИ', en: 'NEWS' },
+  { href: '/artists/', mk: 'АРТИСТИ', en: 'ARTISTS' },
+  { href: '/', mk: 'НОВОСТИ', en: 'NEWS' },
   { href: '/shop/', mk: 'КУПИ', en: 'SHOP' },
   { href: '/archive/', mk: 'АРХИВА', en: 'ARCHIVE' },
   { href: '/support/', mk: 'ПОДДРЖИ нè', en: 'SUPPORT', button: true }
@@ -30,7 +30,7 @@ const buttonNavClass = 'text-2xl lg:text-lg text-black bg-cyan-200 rounded-full 
     <nav id="nav" class="order-6 mt-12 mb-12 hidden w-full self-start justify-self-center lg:order-4 lg:mt-0 lg:mb-0 lg:block lg:w-auto lg:self-auto">
         <ul class="flex flex-col items-center justify-center space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0 xl:space-x-24">
             {navItems.map((item) => {
-                const isActive = url.pathname === item.href || (item.href !== '/' && url.pathname.startsWith(item.href)) || (item.href === '/' && url.pathname.startsWith('/artists/'));
+                const isActive = url.pathname === item.href || (item.href !== '/' && url.pathname.startsWith(item.href)) || (item.href === '/' && url.pathname.startsWith('/news/'));
                 return (
                     <li>
                         <a
