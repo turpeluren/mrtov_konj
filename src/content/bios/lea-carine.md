@@ -11,7 +11,7 @@ slug: lea-carine
 links:
   bandcamp: https://leacarine.bandcamp.com/album/lea-carine
 video:
-  src: https://youtu.be/UR1n4O0GCRg?si=5-Y4AsfWCzIRhJoB
+  src: https://www.youtube.com/embed/UR1n4O0GCRg?si=zcEPVpbkXRrhgXw_
 background:
   src: /images/pozadina-bandacamp.jpg
   offsetX: -50
