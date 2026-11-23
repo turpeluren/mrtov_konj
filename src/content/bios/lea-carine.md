@@ -12,6 +12,7 @@ links:
   bandcamp: https://leacarine.bandcamp.com/album/lea-carine
 background:
   src: /images/pozadina-bandacamp.jpg
+  scale: 3
 ---
 In the battle against an identity crisis—and against all the parasites feeding
 on it—Lea Karin roams into battle using her cardboard sword and clay horse.
