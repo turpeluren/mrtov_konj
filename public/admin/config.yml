@@ -20,7 +20,18 @@ collections:
       - { label: "Color", name: color, widget: string, required: false, hint: 'Hex color code (e.g. #FF0000)' }
       - { label: "Homepage Image", name: home_photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
       - { label: "Image", name: photo, widget: object, fields: [{label: "Photo", name: src, widget: image, required: false}, {label: "Alternative text", name: alt, widget: string, required: false}]}
-      - { label: "Links", name: links, widget: list, fields: [{ label: "Display text", name: name, widget: string}, {label: "Link", name: href, widget: string}], required: false}
+      - { label: "Links", name: links, widget: object, fields: [
+          { label: "Spotify", name: spotify, widget: string, required: false },
+          { label: "YouTube", name: youtube, widget: string, required: false },
+          { label: "Bandcamp", name: bandcamp, widget: string, required: false },
+          { label: "Instagram", name: instagram, widget: string, required: false },
+          { label: "Additional Links", name: additionalLinks, widget: list, fields: [
+            {label: "Display text", name: name, widget: string},
+            {label: "Link", name: href, widget: string}
+          ], required: false},
+          {
+          name:  label: "Display text", name: name, widget: string}, {label: "Link", name: href, widget: string}
+        ], required: false}
       - { label: "Albums", name: albums, widget: list, required: false, fields: [
           { label: "Image", name: src, widget: image },
           { label: "Album name", name: name, widget: string, required: false },
@@ -70,4 +81,4 @@ public_folder: "/images" # The src attribute for uploaded media
 
 site_url: https://mrtov-konj.netlify.app/
 logo_url: https://mrtov-konj.netlify.app/favicon.svg
-locale: 'mk'
+locale: 'en'

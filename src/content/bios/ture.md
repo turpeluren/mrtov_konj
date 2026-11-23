@@ -11,8 +11,9 @@ photo:
   src: /images/gma.jpeg
   alt: me
 links:
-  - name: https://turpelurpeluren.online
-    href: https://turpelurpeluren.online
+  additionalLinks:
+    - name: https://turpelurpeluren.online
+      href: https://turpelurpeluren.online
 video:
   src: https://www.youtube.com/embed/mFTtB__aMNE?si=EDwlN69Tul9aswNQ
   alt: Rave sim 2d

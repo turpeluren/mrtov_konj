@@ -23,7 +23,18 @@ const bios = defineCollection({
 				})
 				.optional(),
 			links: z
-				.array(z.object({ name: z.string(), href: z.string() }))
+				.object({
+					spotify: z.string().optional(),
+					youtube: z.string().optional(),
+					bandcamp: z.string().optional(),
+					instagram: z.string().optional(),
+					additionalLinks: z
+						.array(z.object({
+							name: z.string(),
+							href: z.string(),
+						}))
+						.optional(),
+				})
 				.optional(),
 			albums: z
 				.array(

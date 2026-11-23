@@ -7,8 +7,7 @@ home_photo:
 photo:
   src: /images/coece.jpg
 links:
-  - href: https://leacarine.bandcamp.com/album/lea-carine
-    name: Album Bandcamp
+  bandcamp: https://leacarine.bandcamp.com/album/lea-carine
 ---
 In the battle against an identity crisis—and against all the parasites feeding
 on it—Lea Karin roams into battle using her cardboard sword and clay horse.

@@ -10,9 +10,6 @@ home_photo:
 photo:
   src: /images/vagina-corporation2.jpg
   alt: myes
-links:
-  - name: https://turpelurpeluren.online
-    href: https://turpelurpeluren.online
 albums:
   - src: /images/dali-ova-e-zhivo-.jpg
   - src: /images/c98c530b902da79eca15f63142cc57a0c7171c18.jpg
