@@ -1,6 +1,7 @@
 ---
 name: Lea Carine
 genre: rock, kraut, egg-punk
+color: "#FF7F00"
 home_photo:
   src: /images/coece.jpg
 photo:
@@ -19,7 +20,7 @@ links:
 video:
   src: https://www.youtube.com/embed/UR1n4O0GCRg?si=zcEPVpbkXRrhgXw_
 background:
-  src: /images/pozadina-bandacamp.jpg
+  src: /images/pozadina-bandacamp2.jpg
   offsetX: -50
   offsetY: 0
   rotation: 0
