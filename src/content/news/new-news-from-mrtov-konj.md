@@ -1,7 +1,9 @@
 ---
 title: New news from Mrtov Konj
+description: Hi, how are you doing? Click me to learn a little bit more about
+  how to write posts. This is only a preview description that appears on the
+  home page.
 date: 2026-10-28T10:12:00.000+01:00
-description: "Hi, how are you doing?"
 location: Torino, It
 images:
   - src: /images/bg-klotljudi.jpg
