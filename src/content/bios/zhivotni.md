@@ -7,6 +7,8 @@ home_photo:
   src: /images/zivotni-artist-pejg.jpg
 albums:
   - src: /images/zivotni-album.jpg
+    name: Na Balkan, sam
+    href: https://zhivotni.bandcamp.com/album/-?search_item_id%3D4136052986%26search_item_type%3Da%26search_match_part%3D%253F%26search_page_id%3D6000843385%26search_page_no%3D0%26search_rank%3D1
 background:
   src: /images/0041756570_130.jpg
 ---
