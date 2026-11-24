@@ -7,6 +7,10 @@ home_photo:
   src: /images/clen16.jpg
 photo:
   src: /images/clen16.jpg
+links:
+  instagram: https://www.instagram.com/chlen.16/
+  bandcamp: https://chlen16.bandcamp.com/music
+  youtube: https://www.youtube.com/channel/UCQ9IVDz37yfWmDi5qHFVV7g
 albums:
   - src: /images/dora.jpg
     href: https://chlen16.bandcamp.com/track/-
