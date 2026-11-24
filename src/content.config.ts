@@ -19,7 +19,7 @@ const bios = defineCollection({
 			photo: z
 				.object({
 					alt: z.string().optional(),
-					src: z.string(),
+					src: z.string().optional(),
 					photographer: z.string().optional(),
 				})
 				.optional(),
