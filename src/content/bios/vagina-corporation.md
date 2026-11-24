@@ -10,10 +10,20 @@ home_photo:
 photo:
   src: /images/vagina-corporation2.jpg
   alt: ""
+links:
+  spotify: https://open.spotify.com/artist/5k8NIR12dySVeJnteRqkVz
+  youtube: https://www.youtube.com/@vaginacorporation
+  bandcamp: https://x3maragorn.bandcamp.com/?search_item_id%3D244640599%26search_item_type%3Db%26search_match_part%3D%253F%26search_page_id%3D6000798817%26search_page_no%3D0%26search_rank%3D1
+  instagram: https://www.instagram.com/vagina_corporation/
 albums:
   - src: /images/dali-ova-e-zhivo-.jpg
+    name: Dali e ova zhivo?
+    href: https://golaplanina.bandcamp.com/album/dali-ova-e-zhivo
   - src: /images/c98c530b902da79eca15f63142cc57a0c7171c18.jpg
+    name: Vreme e!
+    href: https://x3maragorn.bandcamp.com/album/--2
   - src: /images/0ff981f2e5e53693e26aa430b36b6efb5a0eda71.jpg
+    name: Avionot nema da padne!?
 video:
   src: https://www.youtube.com/embed/mFTtB__aMNE?si=EDwlN69Tul9aswNQ
   alt: Rave sim 2d
