@@ -1,8 +1,9 @@
 ---
 name: CHLEN 16
-genre: INDUSTRIAL
+genre: Avant-garde, industrial, punk, noise
 font: readex-pro
 topText: false
+color: "#EDC357"
 home_photo:
   src: /images/clen16.jpg
 photo:
