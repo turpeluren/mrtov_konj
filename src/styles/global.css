@@ -152,4 +152,13 @@ html {
             -1px 3px 0 #000,
             -1px -3px 0 #000;
     }
+
+    .card-shadow {
+        box-shadow: 8px 6px 0px 0px white;
+    }
+    .card-shadow:hover {
+        transition: all 0.2s ease-out;
+        transform: translate(-3px, -3px);
+        box-shadow: 14px 12px 0px 0px white;
+    }
 }

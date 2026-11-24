@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NewsCard from '../components/NewsCard.astro';
+import ArtistCard from '../components/ArtistCard.astro';
 
 import { type CollectionEntry, getCollection} from "astro:content";
 
@@ -30,5 +31,14 @@ const allNews: CollectionEntry<"news">[] = await getCollection("news");
                 />
             ))
         }
+
+
+        <h1 class="mt-8 text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
+            LOOKING FOR MORE?
+        </h1>
+        <!-- Extra card linking to /artists/ page -->
+        <a href="/artists/" class="min-h-48 card-shadow flex flex-col items-center justify-center gap-4 mb-8" style={`background-image: url(/images/bg-vagina-corp.jpg); background-position: center 75%; background-size: cover;`}>
+            <p class="text-center text-4xl dela-gothic-one-regular text-white text-outline-2 px-2">АРТИСТИ / ARTISTS</p>
+        </a>
     </div>
 </Layout>
