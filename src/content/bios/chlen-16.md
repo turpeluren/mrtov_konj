@@ -9,6 +9,8 @@ photo:
   src: /images/clen16.jpg
 albums:
   - src: /images/dora.jpg
+    href: https://chlen16.bandcamp.com/track/-
+    name: Nejkam vekje vakov mir
 video:
   src: https://www.youtube.com/embed/pIWx-z43BQg?si=PPlxDZRN1nLhKHIm
 background:
