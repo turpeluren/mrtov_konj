@@ -15,10 +15,18 @@ const navItems : { href: string; mk: string; en: string; button?: boolean }[] = 
 const baseNavClass = 'text-2xl lg:text-lg text-white flex flex-col items-center leading-6 lg:leading-4 hover:text-gray-300';
 const buttonNavClass = 'text-2xl lg:text-lg text-black bg-cyan-200 rounded-full px-4 py-0.5 flex flex-col items-center leading-6 lg:leading-4 hover:bg-cyan-300 hover:text-gray-900';
 ---
-
+<style>
+    .translate-blur {
+        transform: translateY(-20%) !important;
+    }
+</style>
 <div class="relative flex flex-wrap items-start justify-between gap-2 px-6 pt-6 pb-4 lg:h-24 lg:items-center lg:px-6 lg:py-0">
     <!-- Background blur -->
-    <div class="order-1 overflow-x-hidden inset-0 absolute -z-1 left-0 bottom-0 -translate-y-24 h-[150%] translate-x-[-25%] w-[200%] bg-black opacity-70 blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
+    <div class="pointer-events-none absolute inset-0 -z-1 left-0 bottom-0 overflow-x-clip">
+        <div id="bg-blur" class="-translate-y-12 h-[150%] translate-x-[-25%] w-[200%] bg-black opacity-70 blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
+    </div>
+    <!--div class="order-1 inset-0 absolute -z-1 left-0 bottom-0 overflow-x-hidden -translate-y-24 h-[150%] translate-x-[-25%] w-[200%] bg-black opacity-70 blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
+    -->
     <!--div class="order-1 inset-0 absolute -z-1 left-0 top-[-80%] h-[200%] w-full bg-black opacity-70 blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
     -->
 
@@ -76,5 +84,6 @@ const buttonNavClass = 'text-2xl lg:text-lg text-black bg-cyan-200 rounded-full 
     function toggleNav() {
         document?.getElementById('nav')?.classList.toggle('hidden');
         document?.getElementById('hamburger')?.classList.toggle('active');
+        document?.getElementById('bg-blur')?.classList.toggle('translate-blur');s
     }
 </script>
