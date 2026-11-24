@@ -1,6 +1,6 @@
 ---
 name: Lea Carine
-genre: muzik
+genre: rock, kraut, egg-punk
 home_photo:
   src: /images/coece.jpg
 photo:
