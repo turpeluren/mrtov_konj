@@ -1,7 +1,7 @@
 ---
 name: Lea Carine
 genre: rock, kraut, egg-punk
-color: "#FF7F00"
+color: "#e47d00"
 home_photo:
   src: /images/coece.jpg
 photo:
