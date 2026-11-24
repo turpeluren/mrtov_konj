@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Album from '../../../components/Album.astro';
+import SocialLink from '../../../components/SocialLink.astro';
 
 import type { GetStaticPaths } from "astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
@@ -65,7 +66,7 @@ console.log(photo);
         </div>
         <div class="order-1 lg:order-2 flex flex-col gap-4">
             { (photo || home_photo) && (
-                <div class="hidden lg:block w-full aspect-square mb-4">
+                <div class="block lg:hidden w-full aspect-square mb-4">
                     <figure class="w-full h-full">
                         <img src={photo ? photo.src : home_photo?.src} alt={photo ? photo.alt : home_photo?.alt} class=" w-full h-full object-cover" />
                         { photo && photo.photographer && (
@@ -106,19 +107,19 @@ console.log(photo);
                 <ul class="text-white list-inside space-y-2 text-2xl lg:text-lg">
                     <div class="flex gap-3 flex-wrap">
                         { links.website && (
-                            <a href={links.website} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="lucide:globe"/></a>
+                            <SocialLink href={links.website} icon="lucide:globe" />
                         )}
                         { links.bandcamp && ( 
-                            <a href={links.bandcamp} class="hover:underline hover:brightness-75  bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:bandcamp"/></a>
+                            <SocialLink href={links.bandcamp} icon="simple-icons:bandcamp" />
                         )}
                         { links.instagram && (
-                            <a href={links.instagram} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:instagram"/></a>
+                            <SocialLink href={links.instagram} icon="simple-icons:instagram" />
                         )}
                         { links.spotify && (
-                            <a href={links.spotify} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:spotify"/></a>
+                            <SocialLink href={links.spotify} icon="simple-icons:spotify" />
                         )}
                         { links.youtube && (    
-                            <a href={links.youtube} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:youtube"/></a>
+                            <SocialLink href={links.youtube} icon="simple-icons:youtube" />
                         )}
                     </div>
                     { links.additionalLinks && links.additionalLinks.length > 0 && 

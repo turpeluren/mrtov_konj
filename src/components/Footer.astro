@@ -1,4 +1,6 @@
 ---
+import SocialLink from "./SocialLink.astro";
+
 import { Icon } from "astro-icon/components";
 
 const year = new Date().getFullYear();
@@ -24,16 +26,16 @@ const links = {
                 class="flex gap-x-3"
             >
                 { links.bandcamp && ( 
-                    <a href={links.bandcamp} class="hover:underline hover:brightness-75  bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:bandcamp"/></a>
+                    <SocialLink href={links.bandcamp} icon="simple-icons:bandcamp" />
                 )}
                 { links.instagram && (
-                    <a href={links.instagram} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:instagram"/></a>
+                    <SocialLink href={links.instagram} icon="simple-icons:instagram" />
                 )}
                 { links.youtube && (
-                    <a href={links.youtube} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:youtube"/></a>
+                    <SocialLink href={links.youtube} icon="simple-icons:youtube" />
                 )}
-                { links.facebook && (	
-                    <a href={links.facebook} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-12 h-12 lg:w-8 lg:h-8" name="simple-icons:facebook"/></a>
+                { links.facebook && (
+                    <SocialLink href={links.facebook} icon="simple-icons:facebook" />
                 )}
             </nav>
         </div>
