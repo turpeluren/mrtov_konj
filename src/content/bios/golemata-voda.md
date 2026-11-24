@@ -8,8 +8,15 @@ home_photo:
   src: /images/a000495-r1-36-37.jpg
 photo:
   photographer: Mateja Vasojevikj
+links:
+  bandcamp: https://golematavoda.bandcamp.com/music
+  instagram: https://www.instagram.com/golematavoda/
+  youtube: https://www.youtube.com/@golematavoda
+  spotify: https://open.spotify.com/artist/0SQ8FWJpRMi5PJUt1ZPPg4
 albums:
   - src: /images/a1256451191_10.jpg
+    name: Golemata Voda
+    href: https://golematavoda.bandcamp.com/album/-
 video:
   src: https://www.youtube.com/embed/QAoHdqv3qj0?si=l-uqR6z8_MWWiMHM
 background:
