@@ -1,6 +1,6 @@
 ---
 name: MALLARD
-genre: idk
+genre: midwest-emo, post-hardcore
 font: katibeh-regular
 topText: false
 color: "#FF6B00"
@@ -8,10 +8,17 @@ home_photo:
   src: /images/0042110200_10.jpg
 photo:
   src: /images/yesyes.jpg
+  photographer: Sara Bogoeva
+links:
+  bandcamp: https://mallardkonechno.bandcamp.com/
+  instagram: https://www.instagram.com/mallardkonechno/
+  spotify: https://open.spotify.com/artist/68RQLM42FdtwIn5Vqlumcl
 albums:
   - src: /images/mallard-ep.jpg
+    name: Ferid Bajram VS Vasko Karangeleski (Promo EP)
+    href: https://mallardkonechno.bandcamp.com/album/ferid-bajram-vs-vasko-karangeleski-promo-ep
 video:
-  src: https://www.youtube.com/embed/12NZcW7JlVI?si=U3KziZenE57iWTxb
+  src: https://www.youtube.com/embed/Nr3Rz1Y2WVY?si=LA5SIdz7Ln_1N0Gf
 background:
   src: /images/0042110200_10.jpg
 ---
