@@ -56,8 +56,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Images", name: images, widget: list, fields: [{label: "Image", name: src, widget: image}]}
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime", required: false }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Images", name: images, widget: list, fields: [{label: "Image", name: src, widget: image}], required: false }
       - { label: "Content", name: body, widget: markdown }
 
   - name: "archive"

@@ -70,10 +70,13 @@ const news = defineCollection({
 	schema: () =>
 		z.object({
 			title: z.string(),
+			description: z.string().optional(),
+			location: z.string().optional(),
 			date: z
 				.string()
 				.or(z.date())
-				.transform((val) => new Date(val)),
+				.transform((val) => new Date(val))
+				.optional(),
 			images: z
 				.array(z.object({
 					alt: z.string().optional(),

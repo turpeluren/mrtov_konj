@@ -1,6 +1,8 @@
 ---
 title: New news from Mrtov Konj
 date: 2026-10-28T10:12:00.000+01:00
+description: "Hi, how are you doing?"
+location: Torino, It
 images:
   - src: /images/bg-klotljudi.jpg
 ---

@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import GridCard from '../components/GridCard.astro';
+import NewsCard from '../components/NewsCard.astro';
 
 import { type CollectionEntry, getCollection} from "astro:content";
 
@@ -9,16 +9,26 @@ import bgImage from '../assets/bg-news.png';
 const allNews: CollectionEntry<"news">[] = await getCollection("news");
 ---
 
-<Layout title="НОВОСТИ / NEWS" bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={0} bgSize={125}>
-	<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8">
-		{
-			allNews.map(({ data, id }) => (
-				<GridCard
+<Layout title="МРТОВ КОЊ" bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={0} bgSize={125}>
+    <p class="text-center text-xl text-white mb-8 text-outline-2 bg-black px-2 py-2">
+        МРТОВ КОЊ [MRTOV KONJ] is an independent collective and label based in Skopje, Macedonia. <br>
+        We can put some introduction here or maybe som welcoming image or whatever..:)
+    </p>
+    <h1 class="text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
+        НОВОСТИ / NEWS FROM МРТОВ КОЊ
+    </h1>
+    <div class="flex flex-col gap-4 mt-8">
+        {
+            allNews.map(({ data, id }) => (
+                <NewsCard
                     title={data.title}
+                    date={data.date}
+                    description={data.description}
+                    location={data.location}
                     image={data.images?.[0]}
                     href={`/news/${id}/`}
                 />
-			))
-		}
-	</div>
+            ))
+        }
+    </div>
 </Layout>

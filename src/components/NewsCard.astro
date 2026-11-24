@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    title: string;
+    description?: string;
+    date?: Date;
+    location?: string;
+    href: string;
+    image?: { src: string, alt?: string };
+    color?: string;
+}
+
+const { title, description, date, location, href, image, color } = Astro.props as Props; 
+---
+<style>
+    .shadow {
+        box-shadow: 8px 6px 0px 0px white;
+    }
+    .shadow:hover {
+        transition: all 0.2s ease-out;
+        transform: translate(-3px, -3px);
+        box-shadow: 14px 12px 0px 0px white;
+    }
+</style>
+<a
+    class="w-full h-full flex flex-col items-center justify-center group"
+    data-astro-prefetch
+    href={href}
+>
+    <div class="w-full min-h-48 group shadow flex flex-col items-start justify-start gap-4 p-0 hover:brightness-125 transitions-all duration-200"
+        style={`
+            background-image: url(${image?.src});
+            background-size: cover;
+            background-position: center;
+        `}
+    >
+        <!-- Header with date, location -->
+        <div class="flex flex-row items-start justify-start gap-3 text-xl text-white text-center pl-4 pr-12 py-3 bg-indigo-400 rounded-br-full">
+            {date && (
+                <p class="flex items-center">
+                    <Icon name="lucide:calendar-days" class="inline-block mr-2"/>
+                    {date.toLocaleDateString('en-GB', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric'
+                    })}
+                    {location && (
+                        <span>,</span>
+                    )}
+                </p>
+            )}
+
+            {location && (
+                <p class="flex items-center">
+                    <Icon name="lucide:map-pin" class="inline-block mr-2"/>
+                    {location}
+                </p>
+            )}
+        </div>
+
+        <!-- Card body -->
+        <div class="flex flex-col items-start justify-center gap-4 p-4 w-full h-full">
+            <!-- Title -->
+            <p class={`text-2xl lg:text-4xl leading-7 dela-gothic-one-regular text-white /text-indigo-400 text-outline group-hover:brightness-125 transitions-all duration-200`}
+                style={`${color && `color: ${color};`}`}
+            > {title} </p>
+
+            <!-- Optional description -->
+            { description && (
+                <p class="text-white text-md lg:text-xl bg-black px-2 py-1">{description}</p>
+            )}
+        </div>
+    </div>
+</a>
