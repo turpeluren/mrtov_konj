@@ -4,7 +4,8 @@ genre: rock, kraut, egg-punk
 home_photo:
   src: /images/coece.jpg
 photo:
-  src: /images/coece.jpg
+  src: /images/profilna-websajt.jpg
+  photographer: Stefanija Arsovska
 albums:
   - src: /images/album-cover-final-final.png
     name: Lea Carine
