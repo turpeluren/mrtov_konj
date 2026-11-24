@@ -7,7 +7,7 @@ color: "#9E2C40"
 home_photo:
   src: /images/a000495-r1-36-37.jpg
 photo:
-  photographer: " Photo: Mateja Vasojevikj"
+  photographer: Mateja Vasojevikj
 albums:
   - src: /images/a1256451191_10.jpg
 video:
