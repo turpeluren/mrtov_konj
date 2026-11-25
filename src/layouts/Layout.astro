@@ -31,11 +31,20 @@ interface Props {
                 background-position: center center !important;
                 background-size: cover !important;
             }
+
+            .body-bg {
+                
+            }
+        }
+        @media (min-width: 1024px) {
+            .body-bg {
+                background: #000 !important;
+            }
         }
     </style>
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="icon" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
@@ -49,10 +58,10 @@ interface Props {
         <!-- Netlify identity widget -->
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
-    <body class="min-h-screen flex flex-col bg-black relative m-0 overflow-x-clip">
+    <body class="body-bg min-h-screen flex flex-col relative m-0 overflow-x-clip bg-opacity-70" style={bgImage ? `background: #000 url(${bgImage.src}) center / cover no-repeat fixed` : 'background: #000'}>
         <div class="pointer-events-none fixed inset-0 z-[-1] min-h-[100dvh] overflow-hidden">
             <div
-                class={`bg-mobile absolute pointer-events-none z-[-1] inset-0 overflow-hidden bg-contain min-h-[100dvh] brightness-70`}
+                class={`bg-mobile hidden lg:block absolute pointer-events-none z-[-1] inset-0 overflow-hidden bg-contain min-h-[100dvh] brightness-70`}
                 style={`
                     ${ bgSize ? `width: ${bgSize}vw; height: ${bgSize}vw; left: -${bgSize/(100/(bgOffsetX || 50))}vw; top: -${bgSize/(bgOffsetY ? 100/bgOffsetY : 0)}vw;` : 'width: 100%; height: 100%;'}
                     ${ bgImage ? `background-image: url(${bgImage.src}); ` : ''}
