@@ -2,7 +2,7 @@
 name: ALEMBIC
 genre: ART-ROCK
 font: katibeh-regular
-topText: true
+topText: false
 color: "#e30000"
 home_photo:
   src: /images/alembik.jpg
