@@ -10,11 +10,7 @@ import bgImage from '../assets/bg-news.png';
 const allNews: CollectionEntry<"news">[] = await getCollection("news");
 ---
 
-<Layout title="МРТОВ КОЊ" bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={0} bgSize={125}>
-    <p class="text-center text-xl text-white mb-8 text-outline-2 bg-black px-2 py-2">
-        МРТОВ КОЊ [MRTOV KONJ] is an independent collective and label based in Skopje, Macedonia. <br>
-        We can put some introduction here or maybe som welcoming image or whatever..:)
-    </p>
+<Layout title="МРТОВ КОЊ" hero={true} bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={0} bgSize={125}>
     <h1 class="text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
         НОВОСТИ / NEWS FROM МРТОВ КОЊ
     </h1>
