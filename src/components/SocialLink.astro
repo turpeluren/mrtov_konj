@@ -1,7 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { href, icon } = Astro.props as { href: string; icon: string };
+const { href, icon, tooltip, classList, color } = Astro.props as { href: string; icon: string; tooltip: string, classList?: string, color?: string };
+
+// Calculate how light the background color is to determine if we should use black or white for the icon
+function getContrastYIQ(hexcolor: string) {
+    hexcolor = hexcolor.replace("#", "");
+    const r = parseInt(hexcolor.substr(0, 2), 16);
+    const g = parseInt(hexcolor.substr(2, 2), 16);
+    const b = parseInt(hexcolor.substr(4, 2), 16);
+    const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+    return yiq >= 128 ? 'black' : 'white';
+}
 ---
 
-<a href={href} class="hover:underline hover:brightness-75 bg-black rounded-full p-3" target="_blank" rel="noopener noreferrer"><Icon class="inline-block w-8 h-8" name={icon}/></a>
+<a href={href} title={tooltip} class={`hover:underline hover:brightness-75 rounded-full p-3`} style={color ? `background-color: ${color};` : 'background-color: black;'} target="_blank" rel="noopener noreferrer">
+    <Icon class={`inline-block w-8 h-8 ${color ? `text-${getContrastYIQ(color)}` : 'text-white'} ${classList || ''}`} name={icon}/>
+</a>

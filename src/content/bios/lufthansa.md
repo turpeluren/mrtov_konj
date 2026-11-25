@@ -24,7 +24,7 @@ video:
 background:
   src: /images/bg-lufthansa.jpg
   offsetX: 20
-  offsetY: 0
+  offsetY: -50
   rotation: 0
   scale: 1
 ---

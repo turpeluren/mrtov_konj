@@ -105,19 +105,19 @@ const { Content } = await render(bio);
                 <ul class="text-white list-inside space-y-2 text-2xl lg:text-lg">
                     <div class="flex gap-3 flex-wrap">
                         { links.website && (
-                            <SocialLink href={links.website} icon="lucide:globe" />
+                            <SocialLink href={links.website} icon="pixelarticons:globe" color={color} tooltip="Website"/>
                         )}
                         { links.bandcamp && ( 
-                            <SocialLink href={links.bandcamp} icon="simple-icons:bandcamp" />
+                            <SocialLink href={links.bandcamp} icon="pixelarticons:square-sharp" classList="-skew-x-24 scale-y-90" color={color} tooltip="Bandcamp"/>
                         )}
                         { links.instagram && (
-                            <SocialLink href={links.instagram} icon="simple-icons:instagram" />
+                            <SocialLink href={links.instagram} icon="pixelarticons:instagram" color={color} tooltip="Instagram"/>
                         )}
                         { links.spotify && (
-                            <SocialLink href={links.spotify} icon="simple-icons:spotify" />
+                            <SocialLink href={links.spotify} icon="pixelarticons:rss-circle" color={color} tooltip="Spotify"/>
                         )}
                         { links.youtube && (    
-                            <SocialLink href={links.youtube} icon="simple-icons:youtube" />
+                            <SocialLink href={links.youtube} icon="pixelarticons:youtube-solid" color={color} tooltip="YouTube"/>
                         )}
                     </div>
                     { links.additionalLinks && links.additionalLinks.length > 0 && 
