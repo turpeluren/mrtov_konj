@@ -50,9 +50,9 @@ interface Props {
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body class="min-h-screen flex flex-col bg-black relative m-0 overflow-x-clip">
-        <div class="pointer-events-none fixed inset-0 /z-[-1] min-h-[120dvh] overflow-hidden">
+        <div class="pointer-events-none fixed inset-0 z-[-1] min-h-[100dvh] overflow-hidden">
             <div
-                class={`bg-mobile absolute pointer-events-none /z-[-1] inset-0 overflow-hidden bg-contain min-h-[120dvh] h-[120dvh] backdrop-blur-sm brightness-70`}
+                class={`bg-mobile absolute pointer-events-none z-[-1] inset-0 overflow-hidden bg-contain min-h-[100dvh] brightness-70`}
                 style={`
                     ${ bgSize ? `width: ${bgSize}vw; height: ${bgSize}vw; left: -${bgSize/(100/(bgOffsetX || 50))}vw; top: -${bgSize/(bgOffsetY ? 100/bgOffsetY : 0)}vw;` : 'width: 100%; height: 100%;'}
                     ${ bgImage ? `background-image: url(${bgImage.src}); ` : ''}
@@ -70,7 +70,7 @@ interface Props {
                     height: calc(100dvh - 6rem); /* Header is always h-32 aka 8rem */
                 }
             </style>
-            <div id="hero" class="hero-height absolute top-24 z-1 w-full flex flex-col mb-8">
+            <div id="hero" class="hero-height absolute top-24 w-full flex flex-col mb-8">
                 <div class="flex-1 flex flex-col items-center justify-center bg-cover bg-center px-4" style={`background-image: url(${heroImage.src})`}>
                     <h1 class="text-center text-4xl lg:text-6xl dela-gothic-one-regular /text-outline /font-outline-2">{title}</h1>
                     <p class="text-center text-2xl text-white">
@@ -81,7 +81,7 @@ interface Props {
             </div>
             <div id="hero-height-fixer" class="hero-height mb-8"></div>
         )}
-        <div class=" flex-1 w-full max-w-6xl mx-auto px-4 pt-0 pb-0 z-1">
+        <div class="flex-1 w-full max-w-6xl mx-auto px-4 pt-0 pb-0">
             { (title && !hero) && 
                 <h1 class="text-center text-4xl lg:text-6xl dela-gothic-one-regular /text-outline /font-outline-2">{title}</h1>
             }
