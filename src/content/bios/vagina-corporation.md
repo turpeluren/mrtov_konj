@@ -10,6 +10,7 @@ home_photo:
 photo:
   src: /images/vagina-corporation2.jpg
   alt: ""
+  photographer: Andrej Bogatinovski
 links:
   spotify: https://open.spotify.com/artist/5k8NIR12dySVeJnteRqkVz
   youtube: https://www.youtube.com/@vaginacorporation
@@ -25,7 +26,7 @@ albums:
   - src: /images/0ff981f2e5e53693e26aa430b36b6efb5a0eda71.jpg
     name: Avionot nema da padne!?
 video:
-  src: https://www.youtube.com/embed/mFTtB__aMNE?si=EDwlN69Tul9aswNQ
+  src: https://www.youtube.com/embed/vZ-jV-jgric?si=4vD27fw3FC90kNB7
   alt: Rave sim 2d
 background:
   src: /images/bg-vagina-corp.jpg
