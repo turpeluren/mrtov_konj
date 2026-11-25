@@ -30,7 +30,7 @@ const { title, description, date, location, href, image, color } = Astro.props a
             <div class="flex flex-row items-start justify-start gap-3 text-xl text-white text-center pl-4 pr-12 py-3 bg-indigo-400 rounded-br-full">
                 {date && (
                     <p class="flex items-center">
-                        <Icon name="lucide:calendar-days" class="inline-block mr-2"/>
+                        <Icon name="pixelarticons:calendar-2" class="inline-block mr-2"/>
                         {date.toLocaleDateString('en-GB', {
                             day: 'numeric',
                             month: 'short',
@@ -44,7 +44,7 @@ const { title, description, date, location, href, image, color } = Astro.props a
 
                 {location && (
                     <p class="flex items-center">
-                        <Icon name="lucide:map-pin" class="inline-block mr-2"/>
+                        <Icon name="pixelarticons:gps-2" class="inline-block mr-2"/>
                         {location}
                     </p>
                 )}
