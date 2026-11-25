@@ -5,6 +5,9 @@ font: cardo-bold
 topText: false
 home_photo:
   src: /images/zivotni-artist-pejg.jpg
+photo:
+  src: /images/dsc_4482.jpg
+  photographer: Sara Bogoeva
 links:
   instagram: https://www.instagram.com/sitesmezhivotni/
   bandcamp: https://zhivotni.bandcamp.com/album/-
