@@ -8,6 +8,8 @@ home_photo:
   src: /images/alembik.jpg
 photo:
   src: /images/alembik.jpg
+links:
+  spotify: https://open.spotify.com/artist/5Eeb8Yye277viH48LC6RSx?si=mcH7V55gR0OA6xQ8n0LXtw
 albums:
   - src: /images/alembik-album.jpg
 ---
