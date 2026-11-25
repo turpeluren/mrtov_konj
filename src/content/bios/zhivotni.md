@@ -3,7 +3,7 @@ name: ZHIVOTNI
 genre: Pop, folk, jazz, rock
 font: cardo-bold
 topText: false
-color: "#636ba3"
+color: "#b7b8de"
 home_photo:
   src: /images/zivotni-artist-pejg.jpg
 photo:
