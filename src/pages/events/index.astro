@@ -4,7 +4,7 @@ import EventCard from '../../components/EventCard.astro';
 
 import { type CollectionEntry, getCollection} from "astro:content";
 
-import bgImage from '../assets/bg-events.png';
+import bgImage from '../../assets/bg-events.png';
 
 const allEvents: CollectionEntry<"events">[] = await getCollection("events");
 ---
