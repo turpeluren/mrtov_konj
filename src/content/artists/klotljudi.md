@@ -8,8 +8,10 @@ home_photo:
   src: /images/klotljudi.jpg
 photo:
   src: /images/klotljudi2.jpg
+links:
+  youtube: https://www.youtube.com/@deathpopklot
 video:
-  src: https://www.youtube.com/embed/NESBtODxNVA?si=9x9YsmBoBdKLlxtC
+  src: https://www.youtube.com/watch?v=rJm-rJt9krc
 background:
   src: /images/bg-klotljudi.jpg
 ---
