@@ -33,7 +33,8 @@ interface Props {
             }
 
             .body-bg {
-                
+                /* Using the image as a background on the body for mobile devices */
+                /* CSS set inline in the body tag */
             }
         }
         @media (min-width: 1024px) {
@@ -59,7 +60,7 @@ interface Props {
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body class="body-bg min-h-screen flex flex-col relative m-0 overflow-x-clip bg-opacity-70" style={bgImage ? `background: #000 url(${bgImage.src}) center / cover no-repeat fixed` : 'background: #000'}>
-        <div class="pointer-events-none fixed inset-0 z-[-1] min-h-[100dvh] overflow-hidden">
+        <div class="pointer-events-none fixed inset-0 z-[-1] min-h-[100dvh] overflow-hidden bg-black/30">
             <div
                 class={`bg-mobile hidden lg:block absolute pointer-events-none z-[-1] inset-0 overflow-hidden bg-contain min-h-[100dvh] brightness-70`}
                 style={`
