@@ -20,7 +20,7 @@ albums:
 video:
   src: https://www.youtube.com/embed/Nr3Rz1Y2WVY?si=LA5SIdz7Ln_1N0Gf
 background:
-  src: ""
+  src: /images/0042110200_10.jpg
   scale: ""
   offsetX: 1
   offsetY: ""
