@@ -16,6 +16,9 @@ albums:
   - src: /images/harikiri-album-kaver-official-01.jpg
     name: харакири
     href: https://harakiri6.bandcamp.com/album/-?search_item_id%3D852705877%26search_item_type%3Da%26search_match_part%3D%253F%26search_page_id%3D6005700820%26search_page_no%3D0%26search_rank%3D1
+  - src: /images/a3024969917_10.jpg
+    name: Nov den
+    href: https://harakiri6.bandcamp.com/track/--5?search_item_id%3D2391241932%26search_item_type%3Dt%26search_match_part%3D%253F%26search_page_id%3D6005822245%26search_page_no%3D0%26search_rank%3D5
 video:
   src: https://www.youtube.com/embed/n4eyn_oN-mM?si=rsgGHIk7cDwzOZmY
 background:
