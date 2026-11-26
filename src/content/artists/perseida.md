@@ -16,6 +16,8 @@ video:
   src: https://www.youtube.com/embed/LCniMm3hWtU?si=fSssFUk_vmbvvxXb
 background:
   src: /images/maxresdefault.jpg
+  offsetX: 20
+  scale: 0.8
 ---
 Beneath thick layers of guitars and seismic drums and bass emerges the voice of Perseida—a Macedonian shoegaze band formed in 2025.
 

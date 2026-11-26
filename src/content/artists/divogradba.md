@@ -20,5 +20,7 @@ video:
   src: https://www.youtube.com/embed/QzkXDqg656Q?si=h73hPjESMimIHnOY
 background:
   src: /images/web_pozadina.jpg
+  offsetX: 25
+  scale: 0.75
 ---
 A sonic assault—at times gentle, at others visceral—that inevitably leads to a cathartic dance. That is the menu, and Divogradba is the chef. Galloping drums, bolstered by a titanic bass, provide a solid foundation for guitars that clash and tear at one another, yet also embrace—leaving no room for indifference. "Glory to the Exalted One, glory, glory!" the vocalists sing. Divogradba has one self-titled EP under its belt, and work is currently underway on their first full-length album. Formed in 2021, disbanded in 2022, and reformed in 2025—the new lineup of Divogradba breathes fresh vigor into the existing foundations.

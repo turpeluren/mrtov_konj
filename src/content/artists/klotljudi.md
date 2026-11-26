@@ -24,5 +24,7 @@ video:
   src: https://www.youtube.com/embed/t4CPMsUBuig?si=PZ6PK5KAk3OD9gur
 background:
   src: /images/bg-klotljudi.jpg
+  offsetX: 25
+  scale: 0.75
 ---
 Klotljudi, a band hailing from the vibrant music scene of Skopje, North Macedonia, has been making waves with their unique sound—a fusion of Kraut-Rock, Americana, and Psychedelia, affectionately known as DEATH POP. Their music, driven by the angst of our times and inspired by the concrete jungle of Skopje, is a powerful experience that aims to immerse the audience in a mad, angry yet hopeful dance—a dance that beckons the final rain.

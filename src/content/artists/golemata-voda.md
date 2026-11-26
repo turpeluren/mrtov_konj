@@ -21,5 +21,7 @@ video:
   src: https://www.youtube.com/embed/QAoHdqv3qj0?si=l-uqR6z8_MWWiMHM
 background:
   src: /images/pozadina-gv.jpg
+  offsetX: 25
+  offsetY: 15
 ---
 Amidst the new Midwest-emo ambush in Skopje, Golemata Voda is a band whose firing shots are the loudest to be heard. One of the youngest, yet bravest bands, rushing to the front lines and jumping every hurdle with a childlike burst of passion.  Rooted in the community, and running towards the world

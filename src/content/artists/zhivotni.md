@@ -21,5 +21,7 @@ video:
   src: https://www.youtube.com/embed/0eny3VvT3RI?si=5kixus1DgHF6xr4s
 background:
   src: /images/0041756570_130.jpg
+  offsetX: 30
+  scale: 0.9
 ---
 „Zhivotni” („animals”, „life’s”) were born in the Balkan Spring, ready to sing about it and shed (at least a little bit of) light on it. Against genocide, the global apartheid and the poisonous, rotting political parties in this country and everywhere else. We are all animals, with a wish for a home. Wishing that we don't have to leave.

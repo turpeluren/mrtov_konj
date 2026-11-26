@@ -24,6 +24,8 @@ video:
   src: https://www.youtube.com/embed/7WcZtGUu3o8?si=2xTuVfTG-pLojoX5
 background:
   src: /images/alembik_background.jpg
+  offsetX: -25
+  scale: 0.75
 ---
 Alembic are Viktor Tanaskovski (electric/acoustic guitar, bass guitar, mandola, vocals) and Iva Damjanovski (keyboards, vocals, theremin).
 Their music is an attempt to fuse and reinvent a variety of musical genres using experimental and atypical ways.

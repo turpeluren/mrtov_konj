@@ -22,5 +22,7 @@ albums:
     src: /images/a1110863529_10.jpg
 background:
   src: /images/pon.jpg
+  offsetX: 20
+  scale: 0.8
 ---
 Sounds heard in sunken basements and great bellowing ships. Meditations on loss, gain, and the visceral need to move, grow, and change.

@@ -27,5 +27,8 @@ video:
   src: https://www.youtube.com/embed/ggnvxA4e8Jo?si=AY8gL1m-M1zEjFk2
 background:
   src: /images/a2816636956_10.jpg
+  offsetX: 10
+  offsetY: 5
+  scale: 0.8
 ---
 Stoj, Posle! is a six-piece collective born out of Skopje’s thriving alternative DIY scene. Initially a bedroom solo project by Martin Djorlev, it soon evolved into a powerhouse of improvised excursions, blending krautrock, drone, folk, and post-punk influences.

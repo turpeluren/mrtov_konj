@@ -24,6 +24,8 @@ video:
   src: https://www.youtube.com/embed/n4eyn_oN-mM?si=rsgGHIk7cDwzOZmY
 background:
   src: /images/_dsc2471.jpg
+  offsetX: 25
+  scale: 0.8
 ---
 Trio based in Skopje, Macedonia formed 2022.
 Xarakiri roughly speaking plays alternative rock, but pushes it to the limits and tries to tear its hymen.
