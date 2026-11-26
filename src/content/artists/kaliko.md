@@ -18,6 +18,8 @@ albums:
   - src: /images/a3744541714_10.jpg
     name: Petrihor
     href: https://kaliko-skopje.bandcamp.com/album/-
+video:
+  src: https://www.youtube.com/embed/I-WELoOKkw0?si=pUbL-n2kixxGHWr3
 background:
   src: /images/kaliko-moja-ako-ne-ti-tekne-na-fotografot-od-drugata-.jpg
 ---
