@@ -20,3 +20,6 @@ albums:
 background:
   src: /images/kaliko-moja-ako-ne-ti-tekne-na-fotografot-od-drugata-.jpg
 ---
+Kaliko is a band whose tapestry of melodies conceals a quiet, melancholic musical whisper—a whisper harboring both restlessness and delight. It is a musical photo album that evokes nostalgia for memories of lives long past—memories washed over by the rain, leaving space for new ones to be inscribed upon untouched pages, while plants unfurl their leaves to reach for raindrops that the blue sky fails to provide.
+
+\-Zlatko Geleski
