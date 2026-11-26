@@ -18,7 +18,6 @@ albums:
 video:
   src: https://www.youtube.com/embed/_MEqLqvzpKk?si=6lzPgfyUbAj246N8
 background:
-  scale: ""
   src: /images/pozadina.jpg
 ---
 Life is hard when you live in trash and smog and every flower is a cause for celebration. A snowdrop has sprouted on our field, it sways and it sways, standing strong and tall in the harsh winds.
