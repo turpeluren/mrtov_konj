@@ -13,6 +13,13 @@ links:
   spotify: https://open.spotify.com/artist/3zaB82q8nuApT1r063jLRY?si=BmSUDnhDSoGCMHgQrlvevQ
   bandcamp: https://klotljudi.bandcamp.com/album/svi-o-e-vo-e
   instagram: https://www.instagram.com/klotljudi/?utm_source=ig_web_button_share_sheet
+albums:
+  - src: /images/klot_sviocevoce.jpg
+    name: svi oće voće
+    href: https://klotljudi.bandcamp.com/album/svi-o-e-vo-e
+  - src: /images/klot_riploureed.jpg
+    name: r.i.p. lou reed
+    href: https://klotljudi.bandcamp.com/track/r-i-p-lou-reed
 video:
   src: https://www.youtube.com/embed/t4CPMsUBuig?si=PZ6PK5KAk3OD9gur
 background:
