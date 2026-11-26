@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import EventCard from '../components/EventCard.astro';
 
+import { Icon } from "astro-icon/components";
+
 import { type CollectionEntry, getCollection} from "astro:content";
 
 const allEvents: CollectionEntry<"events">[] = await getCollection("events");
@@ -20,9 +22,10 @@ const allEvents: CollectionEntry<"events">[] = await getCollection("events");
             }
         }
         for (const element of removeChildren) {
-            archiveContainer.removeChild(element);
+            //archiveContainer.removeChild(element);
+            element.classList.add("hidden");
         }
-        archiveContainer.classList.toggle("hidden");
+        archiveContainer.classList.remove("hidden");
     });
 </script>
 
