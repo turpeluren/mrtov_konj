@@ -1,8 +1,10 @@
 ---
 name: KALIKO
 genre: alternative rock, pop, blues, shoegaze
-font: dela-gothic-one-regular
+font: katibeh-regular
 topText: false
+home_photo:
+  src: /images/0040852552_10.jpg
 links:
   instagram: https://www.instagram.com/kaliko_dooel/
   bandcamp: https://kaliko-skopje.bandcamp.com/music
