@@ -13,7 +13,7 @@ interface Props {
 
 const { title, tooltip, href, image, font, color, topText=false, rotationAmount=4 } = Astro.props as Props; 
 
-const textSize = font == 'katibeh-regular' ? 'text-5xl' : 'text-4xl';
+const textSize = font == 'katibeh-regular' ? 'text-4xl lg:text-5xl' : 'text-3xl lg:text-4xl';
 
 // Calculate how light the text color is to determine if we should use black or white outline
 function getContrastYIQ(hexcolor: string) {
@@ -37,8 +37,8 @@ const outlineColor = color ? getContrastYIQ(color) : 'text-outline-2';
             const nameWidth = overflowCenterer.getBoundingClientRect().width;
             const backgroundWidth = background.getBoundingClientRect().width;
             if (nameWidth >= backgroundWidth) {
-                //overflowCenterer.classList.add('ml-[-100px]');
-                //overflowCenterer.classList.add('mr-[-100px]');
+                overflowCenterer.classList.add('ml-[-100px]');
+                overflowCenterer.classList.add('mr-[-100px]');
             }
         }
     });
