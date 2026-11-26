@@ -16,9 +16,6 @@ albums:
   - src: /images/dora.jpg
     href: https://chlen16.bandcamp.com/track/-
     name: Nejkam vekje vakov mir
-  - src: /images/a3024969917_10.jpg
-    name: Nov den
-    href: https://harakiri6.bandcamp.com/track/--5
 video:
   src: https://www.youtube.com/embed/pIWx-z43BQg?si=PPlxDZRN1nLhKHIm
 background:
