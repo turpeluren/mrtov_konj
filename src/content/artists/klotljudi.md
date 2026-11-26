@@ -10,6 +10,9 @@ photo:
   src: /images/klotljudi2.jpg
 links:
   youtube: https://www.youtube.com/@deathpopklot
+  spotify: https://open.spotify.com/artist/3zaB82q8nuApT1r063jLRY?si=BmSUDnhDSoGCMHgQrlvevQ
+  bandcamp: https://klotljudi.bandcamp.com/album/svi-o-e-vo-e
+  instagram: https://www.instagram.com/klotljudi/?utm_source=ig_web_button_share_sheet
 video:
   src: https://www.youtube.com/embed/t4CPMsUBuig?si=PZ6PK5KAk3OD9gur
 background:
