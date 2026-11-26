@@ -28,5 +28,6 @@ background:
   offsetY: 0
   rotation: 0
   scale: 1
+hidden: true
 ---
 Kvinnligt alibi

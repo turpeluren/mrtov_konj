@@ -62,6 +62,7 @@ const artists = defineCollection({
 					scale: z.number().optional(),
 				})
 				.optional(),
+			hidden: z.boolean().optional(),
 		}),
 });
 

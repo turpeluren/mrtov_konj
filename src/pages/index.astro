@@ -6,6 +6,7 @@ import ArtistCard from '../components/ArtistCard.astro';
 import { type CollectionEntry, getCollection} from "astro:content";
 
 const allBands: CollectionEntry<"artists">[] = await getCollection("artists");
+const allVisibleBands = allBands.filter((band) => band.data.hidden === false);
 
 const meta = {
 	description: "Artists of Мртов Коњ",
@@ -19,7 +20,7 @@ const meta = {
     </h1>
 	<div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-8 group/dagrid">
 		{
-			allBands.map(({ data, id }, index) => (
+			allVisibleBands.map(({ data, id }, index) => (
 				<ArtistCard
 					title={data.name}
 					image={data.home_photo}
