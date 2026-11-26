@@ -1,43 +1,68 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { Icon } from "astro-icon/components";
 
 import type { GetStaticPaths } from "astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 
 export const getStaticPaths: GetStaticPaths = (async () => {
-	const allNews = await getCollection("news");
+    const allNews = await getCollection("news");
 
-	return allNews.map((news) => ({
-		params: {
-			slug: news.id,
-		},
-		props: { news },
-	}));
+    return allNews.map((news) => ({
+        params: {
+            slug: news.id,
+        },
+        props: { news },
+    }));
 }) satisfies GetStaticPaths;
 
 interface Props {
-	news: CollectionEntry<"news">;
+    news: CollectionEntry<"news">;
 }
 
 const { news } = Astro.props as Props;
-const { title, date, images } = news.data;
+const { title, date, location, images } = news.data;
 const { Content } = await render(news);
 
 ---
 
 <Layout>
-	<h1>{title}</h1>
-	<p class="text-white">{new Date(date).toLocaleString()}</p>
-	{images && images.length > 0 && (
-		<div class="w-full aspect-video mb-4">
-			{
-				images.map((image, index) => (
-					<img src={image.src} alt={image.alt} class="mb-4 w-full object-cover" />
-				))
-			}
-		</div>
-	)}
-	<article class="prose">
-		<Content />
-	</article>
+    <h1>{title}</h1>
+    <!-- Header with date, location -->
+    { (date || location) && (
+        <div class="flex flex-row items-start justify-start gap-3 text-xl text-black text-center pl-4 pr-12 py-3 bg-indigo-400">
+            {date && (
+                <p class="flex items-center">
+                    <Icon name="pixelarticons:calendar-2" class="inline-block mr-2"/>
+                    {date.toLocaleDateString('en-GB', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric'
+                    })}
+                    {location && (
+                        <span>,</span>
+                    )}
+                </p>
+            )}
+
+            {location && (
+                <p class="flex items-center">
+                    <Icon name="pixelarticons:gps-2" class="inline-block mr-2"/>
+                    {location}
+                </p>
+            )}
+        </div>
+    )}
+    {images && images.length > 0 && (
+        <div class="w-full aspect-video mb-4">
+            {
+                images.map((image, index) => (
+                    <img src={image.src} alt={image.alt} class="mb-4 w-full object-cover" />
+                ))
+            }
+        </div>
+    )}
+    <article class="prose">
+        <Content />
+    </article>
 </Layout>

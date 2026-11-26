@@ -27,7 +27,7 @@ const { title, description, date, location, href, image, color } = Astro.props a
     >
         <!-- Header with date, location -->
         { (date || location) && (
-            <div class="flex flex-row items-start justify-start gap-3 text-xl text-white text-center pl-4 pr-12 py-3 bg-indigo-400 rounded-br-full">
+            <div class="flex flex-row items-start justify-start gap-3 text-xl text-black text-center pl-4 pr-12 py-3 bg-indigo-400 rounded-br-full">
                 {date && (
                     <p class="flex items-center">
                         <Icon name="pixelarticons:calendar-2" class="inline-block mr-2"/>

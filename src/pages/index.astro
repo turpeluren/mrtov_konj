@@ -11,7 +11,7 @@ const allNews: CollectionEntry<"news">[] = await getCollection("news");
 ---
 
 <Layout title="МРТОВ КОЊ" hero={true} bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={0} bgSize={125}>
-    <h1 class="text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
+    <h1 id="news" class="text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
         НОВОСТИ / NEWS FROM МРТОВ КОЊ
     </h1>
     <div class="flex flex-col gap-4 mt-8">
@@ -28,13 +28,12 @@ const allNews: CollectionEntry<"news">[] = await getCollection("news");
             ))
         }
 
-
-        <h1 class="mt-8 text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
-            LOOKING FOR MORE?
+        <h1 class="mt-16 text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
+            SEE ALSO
         </h1>
         <!-- Extra card linking to /artists/ page -->
         <a href="/artists/" class="min-h-48 card-shadow flex flex-col items-center justify-center gap-4 mb-8" style={`background-image: url(/images/bg-vagina-corp.jpg); background-position: center 75%; background-size: cover;`}>
-            <p class="text-center text-4xl dela-gothic-one-regular text-white text-outline-2 px-2">АРТИСТИ / ARTISTS</p>
+            <p class="text-center text-4xl dela-gothic-one-regular text-white px-2">АРТИСТИ / ARTISTS</p>
         </a>
     </div>
 </Layout>
