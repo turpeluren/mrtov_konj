@@ -17,6 +17,9 @@ albums:
   - src: /images/a0127111378_10.jpg
     name: Destined Obscurity/Fractal Perception/Recitations
     href: https://pondskull.bandcamp.com/album/destined-obscurity-fractal-perception-recitations
+  - href: https://pondskull.bandcamp.com/album/assorted-non-ambient-demo-works-2025
+    name: Assorted non ambient demo works 2025
+    src: /images/a1110863529_10.jpg
 background:
   src: /images/pon.jpg
 ---
