@@ -32,7 +32,12 @@ const allEvents: CollectionEntry<"events">[] = await getCollection("events");
 <Layout title="АРХИВА / ARCHIVE">
     <div id="archiveContainer" class="hidden flex flex-col gap-4 mt-8">
         {
-            allEvents.map(({ data, id }) => (
+            allEvents.sort((a, b) => {
+                if (a.data.date && b.data.date) {
+                    return b.data.date.getTime() - a.data.date.getTime();
+                }
+                return 0;
+            }).map(({ data, id }) => (
                 <div id={data.date?.toString()}>
                     <EventCard
                         title={data.title}

@@ -12,4 +12,3 @@ images:
   - src: /images/_dsc2471.jpg
     photographer: No one
 ---
-a
