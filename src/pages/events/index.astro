@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventCard from '../../components/EventCard.astro';
+
+import { type CollectionEntry, getCollection} from "astro:content";
+
+import bgImage from '../assets/bg-events.png';
+
+const allEvents: CollectionEntry<"events">[] = await getCollection("events");
+---
+<script is:inline>
+    // Run on body load
+    document.addEventListener('DOMContentLoaded', () => {
+        // Filter events that are older than todays date, at runtime, not build time
+        const eventsContainer = document.getElementById('eventsContainer');
+        var removeChildren = [];
+        for (const element of eventsContainer.children) {
+            const eventsDate = new Date(element.id);
+            if (eventsDate < new Date(new Date().toDateString())) {
+                removeChildren.push(element);
+            }
+        }
+        for (const element of removeChildren) {
+            //eventsContainer.removeChild(element);
+            element.classList.add("hidden");
+        }
+        eventsContainer.classList.remove("hidden");
+        if (eventsContainer.children.length === 0) {
+            // If there are no upcoming events, show a message
+            const noEventsMessage = document.createElement('p');
+            noEventsMessage.textContent = "Нема најавени настани / No upcoming events";
+            noEventsMessage.classList.add("text-center", "text-xl", "text-white", "mt-8");
+            eventsContainer.appendChild(noEventsMessage);
+        }
+    });
+</script>
+
+<Layout title="МРТОВ КОЊ" hero={true} bgImage={bgImage} bgOffsetX={20} bgOffsetY={0} bgRotation={0} bgSize={125}>
+    <h1 id="events" class="text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
+        НАСТАНИ / UPCOMING EVENTS
+    </h1>
+    <div class="flex flex-col gap-4 mt-8">
+        <div id="eventsContainer" class="hidden flex flex-col gap-4">
+        {
+            allEvents.map(({ data, id }) => (
+                <div id={data.date?.toDateString()}>
+                    <EventCard
+                        title={data.title}
+                        date={data.date}
+                        description={data.description}
+                        location={data.location}
+                        image={data.images?.[0]}
+                        href={`/events/${id}/`}
+                    />
+                </div>
+            ))
+        }
+        </div>
+
+        <h1 class="mt-16 text-center text-2xl lg:text-4xl dela-gothic-one-regular /text-outline /font-outline-2">
+            SEE ALSO
+        </h1>
+        <!-- Extra card linking to /artists/ page -->
+        <a href="/artists/" class="min-h-48 card-shadow flex flex-col items-center justify-center gap-4 mb-8" style={`background-image: url(/images/bg-vagina-corp.jpg); background-position: center 75%; background-size: cover;`}>
+            <p class="text-center text-4xl dela-gothic-one-regular text-white px-2">АРТИСТИ / ARTISTS</p>
+        </a>
+    </div>
+</Layout>
