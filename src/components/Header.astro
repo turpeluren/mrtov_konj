@@ -23,7 +23,7 @@ const buttonNavClass = 'text-2xl lg:text-lg text-black bg-cyan-200 rounded-full 
 <div class=`relative flex flex-wrap items-center lg:items-start justify-between gap-2 px-6 pt-6 pb-12 lg:mb-8 lg:h-24 lg:items-start lg:px-6 lg:pb-0``>
     <!-- Background blur -->
     <div class="pointer-events-none absolute h-full inset-0 -z-1 left-0 top-0 overflow-x-clip pb-12 lg:pb-8">
-        <div id="bg-blur" class="-translate-y-12 h-[150%] translate-x-[-25%] w-[200%] bg-black opacity-70 blur-xl lg:blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
+        <div id="header-bg-blur" class="-translate-y-12 h-[150%] translate-x-[-25%] w-[200%] bg-black opacity-70 blur-xl lg:blur-2xl lg:left-[-50%] lg:w-[200%]"></div>
     </div>
 
     <!-- Logo -->
@@ -80,7 +80,7 @@ const buttonNavClass = 'text-2xl lg:text-lg text-black bg-cyan-200 rounded-full 
     function toggleNav() {
         document?.getElementById('nav')?.classList.toggle('hidden');
         document?.getElementById('hamburger')?.classList.toggle('active');
-        document?.getElementById('bg-blur')?.classList.toggle('translate-blur');
+        document?.getElementById('header-bg-blur')?.classList.toggle('translate-blur');
         document?.getElementById('hero')?.classList.toggle('absolute');
         document?.getElementById('hero-height-fixer')?.classList.toggle('hidden');
     }
