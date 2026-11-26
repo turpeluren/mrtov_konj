@@ -1,7 +1,9 @@
 ---
 name: IVL
 genre: ambient, electronic, drone
+font: cardo-regular
 topText: false
+color: "#bcbcbc"
 home_photo:
   src: /images/0042214490_10.jpg
 albums:
