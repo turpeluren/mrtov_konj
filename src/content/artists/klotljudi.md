@@ -11,7 +11,7 @@ photo:
 links:
   youtube: https://www.youtube.com/@deathpopklot
 video:
-  src: https://www.youtube.com/watch?v=t4CPMsUBuig&list=RDt4CPMsUBuig&start_radio=1
+  src: https://www.youtube.com/embed/t4CPMsUBuig?si=PZ6PK5KAk3OD9gur
 background:
   src: /images/bg-klotljudi.jpg
 ---
