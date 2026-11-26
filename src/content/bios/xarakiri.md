@@ -21,3 +21,10 @@ video:
 background:
   src: /images/_dsc2471.jpg
 ---
+Trio based in Skopje, Macedonia formed 2022.
+Xarakiri roughly speaking plays alternative rock, but pushes it to the limits and tries to tear its hymen.
+\
+Members:
+Andrej Dimovski,
+Viktor Stojanovski
+and Marko Pechenovikj
