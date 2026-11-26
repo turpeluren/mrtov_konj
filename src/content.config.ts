@@ -56,10 +56,10 @@ const artists = defineCollection({
 			background: z
 				.object({
 					src: z.string(),
-					offsetX: z.number().optional(),
-					offsetY: z.number().optional(),
-					rotation: z.number().optional(),
-					scale: z.number().optional(),
+					offsetX: z.number().or(z.string().transform((val) => undefined)).optional(),
+					offsetY: z.number().or(z.string().transform((val) => undefined)).optional(),
+					rotation: z.number().or(z.string().transform((val) => undefined)).optional(),
+					scale: z.number().or(z.string().transform((val) => undefined)).optional(),
 				})
 				.optional(),
 			hidden: z.boolean().optional(),

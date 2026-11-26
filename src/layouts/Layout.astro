@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 
 import heroImage from '../assets/bg-shop.png';
 
-const { title, hero=false, bgImage, bgOffsetX, bgOffsetY, bgRotation, bgSize } = Astro.props;
+const { title, hero=false, bgImage, bgOffsetX=50, bgOffsetY=0, bgRotation=0, bgSize=200 } = Astro.props;
 
 interface Props {
     title?: string;

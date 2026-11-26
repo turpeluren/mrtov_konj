@@ -28,7 +28,7 @@ const { name, genre, font, color, links, albums, video, photo, home_photo, backg
 const { Content } = await render(artist);
 ---
 
-<Layout bgImage={background} bgOffsetX={background?.offsetX ?? 50} bgOffsetY={background?.offsetY ?? 0} bgRotation={background?.rotation ?? 0} bgSize={background?.scale ? background.scale*2*100 : 200}>
+<Layout bgImage={background} bgOffsetX={background?.offsetX} bgOffsetY={background?.offsetY} bgRotation={background?.rotation} bgSize={background?.scale ? background.scale * 200 : 200}>
     <!-- Generic back button pushing off the user navigation stack -->
     <button class="text-white cursor-pointer mb-4 hover:underline hover:brightness-75" onclick="window.history.back()"><Icon class="inline-block h-8 w-8" name="pixelarticons:chevron-left" /></button>
 
