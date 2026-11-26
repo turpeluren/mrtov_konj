@@ -25,6 +25,7 @@ albums:
     href: https://x3maragorn.bandcamp.com/album/--2
   - src: /images/0ff981f2e5e53693e26aa430b36b6efb5a0eda71.jpg
     name: Avionot nema da padne!?
+    href: https://x3maragorn.bandcamp.com/album/-
 video:
   src: https://www.youtube.com/embed/vZ-jV-jgric?si=4vD27fw3FC90kNB7
   alt: Rave sim 2d
