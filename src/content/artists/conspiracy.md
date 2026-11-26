@@ -12,6 +12,15 @@ links:
   spotify: https://open.spotify.com/artist/5Eeb8Yye277viH48LC6RSx?si=mcH7V55gR0OA6xQ8n0LXtw
 albums:
   - src: /images/alembik-album.jpg
+    name: Без никого да удриш
+    href: https://alembic1.bandcamp.com/album/-
+  - src: /images/alembik_selftitled.jpg
+    name: Alembic
+    href: https://alembic1.bandcamp.com/album/alembic
+video:
+  src: https://www.youtube.com/embed/7WcZtGUu3o8?si=2xTuVfTG-pLojoX5
+background:
+  src: /images/alembik_background.jpg
 ---
 Alembic are Viktor Tanaskovski (electric/acoustic guitar, bass guitar, mandola, vocals) and Iva Damjanovski (keyboards, vocals, theremin).
 Their music is an attempt to fuse and reinvent a variety of musical genres using experimental and atypical ways.
