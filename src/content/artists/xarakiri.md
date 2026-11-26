@@ -3,6 +3,7 @@ name: XARAKIRI
 genre: alternative rock
 font: cardo-bold
 topText: false
+color: "#ffffff"
 home_photo:
   src: /images/dsc_5177.jpg
 photo:
