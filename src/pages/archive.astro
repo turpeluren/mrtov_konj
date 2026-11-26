@@ -2,8 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import EventCard from '../components/EventCard.astro';
 
-import { Icon } from "astro-icon/components";
-
 import { type CollectionEntry, getCollection} from "astro:content";
 
 const allEvents: CollectionEntry<"events">[] = await getCollection("events");
@@ -26,6 +24,13 @@ const allEvents: CollectionEntry<"events">[] = await getCollection("events");
             element.classList.add("hidden");
         }
         archiveContainer.classList.remove("hidden");
+        if (archiveContainer.children.length === 0) {
+            // If there are no upcoming events, show a message
+            const noEventsMessage = document.createElement('p');
+            noEventsMessage.textContent = "Нема архивирани настани / No archived events";
+            noEventsMessage.classList.add("text-center", "text-xl", "text-white", "mt-8");
+            archiveContainer.appendChild(noEventsMessage);
+        }
     });
 </script>
 

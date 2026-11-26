@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import EventCard from '../components/EventCard.astro';
-import ArtistCard from '../components/ArtistCard.astro';
 
 import { type CollectionEntry, getCollection} from "astro:content";
 
@@ -22,9 +21,17 @@ const allEvents: CollectionEntry<"events">[] = await getCollection("events");
             }
         }
         for (const element of removeChildren) {
-            eventsContainer.removeChild(element);
+            //eventsContainer.removeChild(element);
+            element.classList.add("hidden");
         }
-        eventsContainer.classList.toggle("hidden");
+        eventsContainer.classList.remove("hidden");
+        if (eventsContainer.children.length === 0) {
+            // If there are no upcoming events, show a message
+            const noEventsMessage = document.createElement('p');
+            noEventsMessage.textContent = "Нема најавени настани / No upcoming events";
+            noEventsMessage.classList.add("text-center", "text-xl", "text-white", "mt-8");
+            eventsContainer.appendChild(noEventsMessage);
+        }
     });
 </script>
 
