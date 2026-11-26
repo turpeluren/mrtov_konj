@@ -48,9 +48,9 @@ collections:
         ]}
       - { label: "Body", name: body, widget: markdown, required: false }
 
-  - name: "news"
-    label: "News"
-    folder: "src/content/news"
+  - name: "events"
+    label: "Events"
+    folder: "src/content/events"
     create: true
     identifier_field: title
     slug: "{{slug}}"

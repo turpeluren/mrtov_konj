@@ -1,21 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import NewsCard from '../components/NewsCard.astro';
+import EventCard from '../components/EventCard.astro';
 
 import { type CollectionEntry, getCollection} from "astro:content";
 
-const allNews: CollectionEntry<"news">[] = await getCollection("news");
+const allEvents: CollectionEntry<"events">[] = await getCollection("events");
 ---
 
 <script is:inline>
     // Run on body load
     document.addEventListener('DOMContentLoaded', () => {
-        // Filter news that are older than todays date, at runtime, not build time
+        // Filter events that are older than todays date, at runtime, not build time
         const archiveContainer = document.getElementById('archiveContainer');
         var removeChildren = [];
         for (const element of archiveContainer.children) {
-            const newsDate = new Date(element.id);
-            if (newsDate > new Date(new Date().toDateString())) {
+            const eventsDate = new Date(element.id);
+            if (eventsDate > new Date(new Date().toDateString())) {
                 removeChildren.push(element);
             }
         }
@@ -29,15 +29,15 @@ const allNews: CollectionEntry<"news">[] = await getCollection("news");
 <Layout title="АРХИВА / ARCHIVE">
     <div id="archiveContainer" class="hidden flex flex-col gap-4 mt-8">
         {
-            allNews.map(({ data, id }) => (
+            allEvents.map(({ data, id }) => (
                 <div id={data.date?.toString()}>
-                    <NewsCard
+                    <EventCard
                         title={data.title}
                         date={data.date}
                         description={data.description}
                         location={data.location}
                         image={data.images?.[0]}
-                        href={`/news/${id}/`}
+                        href={`/events/${id}/`}
                     />
                 </div>
             ))
