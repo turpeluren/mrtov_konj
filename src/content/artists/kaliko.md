@@ -1,5 +1,5 @@
 ---
-name: KALIKO
+name: Kaliko
 genre: alternative rock, pop, blues, shoegaze
 font: katibeh-regular
 topText: false
