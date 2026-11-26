@@ -7,6 +7,7 @@ date: 2026-10-28T10:12:00.000+01:00
 location: Torino, It
 images:
   - src: /images/bg-klotljudi.jpg
+  - src: /images/0042110200_10.jpg
 ---
 # Big News
 
