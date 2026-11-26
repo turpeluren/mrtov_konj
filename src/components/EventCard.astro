@@ -7,7 +7,7 @@ interface Props {
     date?: Date;
     location?: string;
     href: string;
-    image?: { src: string, alt?: string };
+    image?: { src?: string, alt?: string };
     color?: string;
 }
 
@@ -21,6 +21,7 @@ const { title, description, date, location, href, image, color } = Astro.props a
     <div class="w-full min-h-48 group card-shadow flex flex-col items-start justify-start gap-4 p-0 hover:brightness-125 transitions-all duration-200"
         style={`
             background-image: url(${image?.src});
+            ${!image?.src && 'background-color: #000;'}
             background-size: cover;
             background-position: center;
         `}

@@ -80,9 +80,10 @@ const events = defineCollection({
 			images: z
 				.array(z.object({
 					description: z.string().optional(),
-					src: z.string(),
+					src: z.string().optional(),
 					photographer: z.string().optional(),
-				})),
+				}))
+				.optional(),
 		}),
 });
 

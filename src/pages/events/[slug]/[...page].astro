@@ -70,7 +70,7 @@ const { Content } = await render(events);
         <h1 class="mt-4">Image archive</h1>
         <div class="w-full aspect-video mb-4">
             {
-                images.slice(1).map((image : { src: string; description?: string; photographer?: string; date?: Date }, index) => (
+                images.slice(1).map((image : { src?: string; description?: string; photographer?: string; date?: Date }, index) => (
                     <figure>
                         <img src={image.src} alt={image.description ?? ''} class="w-full object-cover" />
                         { (image.photographer || image.description) && (
