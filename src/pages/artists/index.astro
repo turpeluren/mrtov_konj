@@ -5,7 +5,7 @@ import ArtistCard from '../../components/ArtistCard.astro';
 
 import { type CollectionEntry, getCollection} from "astro:content";
 
-const allBands: CollectionEntry<"bios">[] = await getCollection("bios");
+const allBands: CollectionEntry<"artists">[] = await getCollection("artists");
 
 const meta = {
 	description: "Artists of Мртов Коњ",

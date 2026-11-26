@@ -7,8 +7,8 @@ backend:
 
 collections:
   - name: "artists"
-    label: "Artist bios"
-    folder: "src/content/bios"
+    label: "Artist"
+    folder: "src/content/artists"
     create: true
     identifier_field: name
     slug: "{{slug}}"

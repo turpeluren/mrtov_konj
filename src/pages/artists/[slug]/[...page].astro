@@ -9,23 +9,23 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 import { Icon } from "astro-icon/components";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const allBios = await getCollection("bios");
+    const allArtists = await getCollection("artists");
 
-    return allBios.map((bio) => ({
+    return allArtists.map((artist) => ({
         params: {
-            slug: bio.id,
+            slug: artist.id,
         },
-        props: { bio },
+        props: { artist },
     }));
 };
 
 interface Props {
-    bio: CollectionEntry<"bios">;
+    artist: CollectionEntry<"artists">;
 }
 
-const { bio } = Astro.props as Props;
-const { name, genre, font, color, links, albums, video, photo, home_photo, background }  = bio.data;
-const { Content } = await render(bio);
+const { artist } = Astro.props as Props;
+const { name, genre, font, color, links, albums, video, photo, home_photo, background }  = artist.data;
+const { Content } = await render(artist);
 ---
 
 <Layout bgImage={background} bgOffsetX={background?.offsetX ?? 50} bgOffsetY={background?.offsetY ?? 0} bgRotation={background?.rotation ?? 0} bgSize={background?.scale ? background.scale*2*100 : 200}>
