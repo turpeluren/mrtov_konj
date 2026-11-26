@@ -11,7 +11,11 @@ photo:
 links:
   youtube: https://www.youtube.com/@deathpopklot
 video:
-  src: https://youtu.be/n81cMP_QZhQ?si=_kmowWqyHAGg24_G
+  src: <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/n81cMP_QZhQ?si=6HnWMdqo7OV85OQf"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 background:
   src: /images/bg-klotljudi.jpg
 ---
