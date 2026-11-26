@@ -10,6 +10,9 @@ photo:
   src: /images/alembik.jpg
 links:
   spotify: https://open.spotify.com/artist/5Eeb8Yye277viH48LC6RSx?si=mcH7V55gR0OA6xQ8n0LXtw
+  instagram: https://www.instagram.com/aalembik/
+  bandcamp: https://alembic1.bandcamp.com/
+  youtube: https://www.youtube.com/channel/UCv1gR5qgnpXrS9NvGeHnDWw
 albums:
   - src: /images/alembik-album.jpg
     name: Без никого да удриш
