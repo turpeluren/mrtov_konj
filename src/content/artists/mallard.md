@@ -22,7 +22,7 @@ video:
 background:
   src: /images/0042110200_10.jpg
   scale: ""
-  offsetX: 1
+  offsetX: ""
   offsetY: ""
 ---
 When the love and friendship is strong, the music effortlessly pours. This four-headed creature called Mallard is made up of four inseparable friends with big hearts, thrown into the clogged state apparatus and left to fend for themselves. Mallard is both a warm hug and a kick in the face. Youthful love and angst, steered in the right direction, without much compromise.
