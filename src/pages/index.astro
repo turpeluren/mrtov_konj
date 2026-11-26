@@ -6,7 +6,7 @@ import ArtistCard from '../components/ArtistCard.astro';
 import { type CollectionEntry, getCollection} from "astro:content";
 
 const allBands: CollectionEntry<"artists">[] = await getCollection("artists");
-const allVisibleBands = allBands.filter((band) => band.data.hidden === false);
+const allVisibleBands = allBands.filter((band) => band.data.hidden !== true);
 
 const meta = {
 	description: "Artists of Мртов Коњ",
