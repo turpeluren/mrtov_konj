@@ -2,6 +2,7 @@
 name: Stoj, Posle!
 genre: experimental-pop, rock, minimal
 topText: false
+color: "#e5d163"
 home_photo:
   src: /images/a1303434712_10.jpg
 photo:
