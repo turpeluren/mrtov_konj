@@ -79,10 +79,10 @@ const news = defineCollection({
 				.optional(),
 			images: z
 				.array(z.object({
-					alt: z.string().optional(),
+					description: z.string().optional(),
 					src: z.string(),
-				}))
-				.optional(),
+					photographer: z.string().optional(),
+				})),
 		}),
 });
 
@@ -92,7 +92,7 @@ const archive = defineCollection({
 		z.object({
 			images: z
 				.array(z.object({
-					alt: z.string().optional(),
+					description: z.string().optional(),
 					src: z.string(),
 					photographer: z.string().optional(),
 					date: z

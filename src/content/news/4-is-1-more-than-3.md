@@ -1,6 +1,6 @@
 ---
 title: 4 is 1 more than 3
-date: 2026-10-28T10:01:00.000+01:00
+date: 2026-11-26T10:01:00.000+01:00
 images:
   - src: /images/lufthansa-live.jpg
 ---

@@ -59,26 +59,30 @@ collections:
       - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime", required: false }
       - { label: "Location", name: "location", widget: "string", required: false }
-      - { label: "Images", name: images, widget: list, fields: [{label: "Image", name: src, widget: image}], required: false }
+      - { label: "Images", name: images, widget: list, fields: [
+          {label: "Image", name: src, widget: image},
+          {label: "Photo credit", name: photographer, widget: string, required: false},
+          {label: "Description", name: description, widget: string, required: false}
+        ], required: false }
       - { label: "Content", name: body, widget: markdown }
 
-  - name: "archive"
-    label: "Archive"
-    folder: "src/content/archive"
-    create: false
-    identifier_field: title
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "hidden" }
-      - { label: "Images", name: images, widget: list, required: false, fields: [
-          { label: "Image", name: src, widget: image},
-          { label: "Date", name: "date", widget: "datetime", required: false},
-          { label: "Photo credit", name: photographer, widget: string, required: false}
-        ]}
+#  - name: "archive"
+#    label: "Archive"
+#    folder: "src/content/archive"
+#    create: false
+#    identifier_field: title
+#    slug: "{{slug}}"
+#    fields:
+#      - { label: "Title", name: "title", widget: "hidden" }
+#      - { label: "Images", name: images, widget: list, required: false, fields: [
+#          { label: "Image", name: src, widget: image},
+#          { label: "Date", name: "date", widget: "datetime", required: false},
+#          { label: "Photo credit", name: photographer, widget: string, required: false}
+#        ]}
 
 media_folder: "public/images" # Location where files will be stored in the repo
 public_folder: "/images" # The src attribute for uploaded media
 
 site_url: https://mrtov-konj.netlify.app/
-logo_url: https://mrtov-konj.netlify.app/favicon.svg
+logo_url: https://mrtov-konj.netlify.app/mrtov_konj-logo.png
 locale: 'en'
