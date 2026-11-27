@@ -3,7 +3,7 @@ import "../styles/global.css";
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-import heroImage from '../assets/bg-shop.png';
+import heroImage from '../assets/hero.png';
 
 const { title, hero=false, bgImage, bgOffsetX=50, bgOffsetY=0, bgRotation=0, bgSize=200 } = Astro.props;
 
@@ -60,7 +60,7 @@ interface Props {
         <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body class="body-bg min-h-screen flex flex-col relative m-0 overflow-x-clip bg-opacity-70" style={bgImage ? `background: #000 url(${bgImage.src}) center / cover no-repeat fixed` : 'background: #000'}>
-        <div class="pointer-events-none fixed inset-0 z-[-1] min-h-[100dvh] overflow-hidden bg-black/30">
+        <div class="pointer-events-none fixed inset-0 z-[-3] min-h-[100dvh] overflow-hidden bg-black/30">
             <div
                 class={`bg-mobile hidden lg:block absolute pointer-events-none z-[-1] inset-0 overflow-hidden bg-contain min-h-[100dvh] brightness-70`}
                 style={`
@@ -76,19 +76,33 @@ interface Props {
         <!-- Hero Section -->
         { hero && (
             <style>
-                .hero-height {
-                    height: calc(100vh - 6rem); /* Header is always h-32 aka 8rem */
+                @media (max-width: 1024px) {
+                    .hero-height {
+                        height: 100vh; /* - 6rem Header is always h-24 aka 6rem */
+                    }
+                }
+                @media (min-width: 1024px) {
+                    .hero-height {
+                        height: max(68.4vw, 100vh); /* This is for transparent image that can extend below the screen, 
+                                                       for a full image use 100vh or calc(100vh - 6rem) and top-24 on the hero (Header is always h-24 aka 6rem) */
+                    }
+                    .hero-image {
+                        transform: translateY(min(0px, calc(100vh - 60vw)));
+                    }
+                }
+                #hero-height-fixer {
+                    height: calc(100vh - 6rem);
                 }
             </style>
-            <div id="hero" class="hero-height absolute top-24 w-full flex flex-col mb-8">
-                <div class="flex-1 flex flex-col items-center justify-center bg-cover bg-center px-4" style={`background-image: url(${heroImage.src})`}>
+            <div id="hero" class="hero-height pointer-events-none absolute top-0 w-full flex flex-col mb-8">
+                <div class="hero-image flex-1 flex flex-col items-center -z-2 justify-center bg-cover lg:bg-cover bg-no-repeat bg-center px-4" style={`background-image: url(${heroImage.src});`}>
                     <h1 class="text-center text-4xl lg:text-6xl dela-gothic-one-regular /text-outline /font-outline-2">{title}</h1>
                     <p class="text-center text-2xl text-white">
                         МРТОВ КОЊ [ˈmr̩tɔf ˈkɔɲa] is an independent collective and label based in Skopje, Macedonia.
                     </p>
                 </div>
             </div>
-            <div id="hero-height-fixer" class="hero-height mb-8"></div>
+            <div id="hero-height-fixer" class="mb-8"></div>
         )}
         <div class="flex-1 w-full max-w-6xl mx-auto px-4 pt-0 pb-0">
             { (title && !hero) && 
